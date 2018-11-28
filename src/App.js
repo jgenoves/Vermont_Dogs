@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-            <h1>Hello World</h1>
+            <h1>Hello Mars</h1>
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
