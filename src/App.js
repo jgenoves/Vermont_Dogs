@@ -1,24 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import AboutMe from './components/about-me.jsx';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-            <h1>Hello Mars</h1>
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          <AboutMe className='About-Me'/>
+
       </div>
     );
   }
