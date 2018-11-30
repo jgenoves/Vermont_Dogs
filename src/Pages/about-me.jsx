@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Header from './header.jsx';
-import Footer from './footer.jsx';
+import Top from '../components/top';
+import Footer from '../components/footer';
 
 const css = 'About-Me';
 
@@ -8,7 +8,7 @@ export default class AboutMe extends Component {
     render() {
         return <React.Fragment>
 
-            <Header/>
+            <Top />
             <article className={css}>
                 <h2>About us: Vermont Shelter</h2>
 
