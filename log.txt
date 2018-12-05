@@ -1,0 +1,119 @@
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Hello
+hello
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Hello
+hello
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Hello
+hello
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Hello
+hello
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Hello
+hello
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+This is the Enviorment[object Object]
+This is the Enviorment
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }

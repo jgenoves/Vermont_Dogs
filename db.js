@@ -1,4 +1,5 @@
 var mysql = require('mysql');
+
 const env = process.env.NODE_ENV;
 const config = require('config');
 var state = {
@@ -7,14 +8,10 @@ var state = {
 }
 
 function connect(env) {
+    console.log("This is the Enviorment: ");
     console.log(env);
     return new Promise((resolve, reject) => {
-
-        if (env === 'production') {
             state.pool = mysql.createPool(env);
-        } else {
-            state.pool = mysql.createPool(env);
-        }
         state.env = env;
         resolve();
         reject(new Error('Failed to Connect'));
