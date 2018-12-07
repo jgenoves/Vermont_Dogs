@@ -11,8 +11,52 @@ const tags = [
 
 ];
 
+const RadioButton = ({
+                         field: { name, value, onChange, onBlur },
+                         id,
+                         label,
+                         className,
+                         ...props
+                     }) => {
+    return (
+        <div>
+            <input
+                name={name}
+                id={id}
+                type="radio"
+                value={id}
+                checked={id === value}
+                onChange={onChange}
+                onBlur={onBlur}
+                className={"radio-button"}
+                {...props}
+            />
+            <label htmlFor={id}>{label}</label>
+        </div>
+    );
+};
+
+const RadioButtonGroup = ({
+                              value,
+                              error,
+                              touched,
+                              id,
+                              label,
+                              className,
+                              children
+                          }) => {
+    return (
+
+            <fieldset>
+                <legend>{label}</legend>
+                {children}
+
+            </fieldset>
+    );
+};
+
 const addDog = () => (
-    <React.Fragment>
+
         <Formik
             initialValues={{
                 name: 'Name',
@@ -106,7 +150,7 @@ const addDog = () => (
                     {touched.desc && errors.desc && <p className="errors">{errors.desc}</p>}
                 </fieldset>
 
-                <br/>
+
                     <fieldset className="formInput">
                         <label className="formLabel">
                             Photo(Optional):
@@ -115,7 +159,35 @@ const addDog = () => (
                         {touched.photo && errors.photo && <p className="errors">{errors.photo}</p>}
                     </fieldset>
 
-                <br/>
+
+                    <legends>Choose the status of the dog</legends>
+                    <RadioButtonGroup
+                        id="status"
+                        value={values.status}
+                        error={errors.status}
+                        touched={touched.status}
+                    >
+                        <Field
+                            component={RadioButton}
+                            name="status"
+                            id="Adopted"
+                            label="Adopted"
+                        />
+                        <Field
+                            component={RadioButton}
+                            name="status"
+                            id="Available"
+                            label="Available"
+                        />
+
+                        <Field
+                            component={RadioButton}
+                            name="status"
+                            id="Fostered"
+                            label="Fostered"
+                        />
+                    </RadioButtonGroup>
+
 
 
                 <button type="submit" disabled={isSubmitting}> Submit Dog </button>
@@ -126,11 +198,11 @@ const addDog = () => (
             />
 
 
-    </React.Fragment>
+
 );
 
 const addTags = () => (
-    <React.Fragment>
+
 
         <Formik
             initialValues={{
@@ -206,7 +278,7 @@ const addTags = () => (
                 </form>
             )}
             />
-    </React.Fragment>
+
     );
 
 export default class AddDog extends Component {
