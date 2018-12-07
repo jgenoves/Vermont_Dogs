@@ -1,0 +1,1601 @@
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Hello
+hello
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Hello
+hello
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Hello
+hello
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Hello
+hello
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Hello
+hello
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Hello
+hello
+This is the Enviorment[object Object]
+This is the Enviorment
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+ERROR Joi.date.min is not a function
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+ERROR dogTag is not defined
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+ERROR Invalid schema content: (fldAuthor)
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+ERROR Joi.date(...).moment is not a function
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+[ [ 'This guy', 'forever', '10-7-2018', 'Burlington vt somewhere' ] ]
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+[ [ 'This guy', 'forever', '10-7-18', 'Burlington vt somewhere' ] ]
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+[ [ 'This guy', 'forever', '10-7-18', 'Burlington vt somewhere' ] ]
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+[ [ 'This guy', 'forever', '10-7-18', 'Burlington vt somewhere' ] ]
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+[ [ 'This guy', 'forever', '10-7-2018', 'Burlington vt somewhere' ] ]
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+ERROR Joi.date(...).format is not a function
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+ERROR Joi.date() does not allow arguments.
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+ERROR Joi.date.required is not a function
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+[ [ 'This guy', 'forever', '2018-10-07', 'Burlington vt somewhere' ] ]
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+[ [ 'This guy', 'forever', '2018-10-07', 'Burlington vt somewhere' ] ]
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+[ [ 'This guy', 'forever', '2018-10-07', 'Burlington vt somewhere' ] ]
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+[ [ 'This guy', 'forever', '2018-10-07', 'Burlington vt somewhere' ] ]
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 3,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Cannot read property 'acquireTimeout' of undefined
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+undefined
+This is the Enviorment: 
+undefined
+This is the Enviorment: 
+undefined
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+This is the Enviorment: 
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+This is the Enviorment: 
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Cannot read property 'acquireTimeout' of undefined
+This is the Enviorment: 
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Cannot read property 'acquireTimeout' of undefined
+ERROR Cannot read property 'query' of null
+ERROR Cannot read property 'query' of null
+This is the Enviorment: 
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+Cannot read property 'acquireTimeout' of undefined
+ERROR Cannot read property 'query' of null
+ERROR Cannot read property 'query' of null
+ERROR Cannot read property 'query' of null
+This is the Enviorment: 
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+This is the Enviorment: 
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+This is the Enviorment: 
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'webdb.uvm.edu',
+  user: 'wrisigo_admin',
+  password: 'CS148Bob',
+  database: 'WRISIGO_Dogs' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'localhost',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'root',
+        password: 'CSBob148',
+        database: 'sys',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'localhost',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'root',
+        password: 'CSBob148',
+        database: 'sys',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'localhost',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'root',
+        password: 'CSBob148',
+        database: 'sys',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'localhost',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'root',
+        password: 'CSBob148',
+        database: 'sys',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'localhost',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'root',
+        password: 'CSBob148',
+        database: 'sys',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'webdb.uvm.edu',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'wrisigo',
+        password: 'CS148Bob',
+        database: undefined,
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'webdb.uvm.edu',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'wrisigo',
+        password: 'CS148Bob',
+        database: 'WRISIGO_Dogs',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'webdb.uvm.edu',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'wrisigo_admin',
+        password: 'CS148Bob',
+        database: 'WRISIGO_Dogs',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'webdb.uvm.edu',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'wrisigo_admin',
+        password: 'CS148Bob',
+        database: 'WRISIGO_Dogs',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'webdb.uvm.edu',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'wrisigo_admin',
+        password: 'CS148Bob',
+        database: 'WRISIGO_Dogs',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'webdb.uvm.edu',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'wrisigo_admin',
+        password: 'CS148Bob',
+        database: 'WRISIGO_Dogs',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'webdb.uvm.edu',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'wrisigo_admin',
+        password: 'CS148Bob',
+        database: 'WRISIGO_Dogs',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'webdb.uvm.edu',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'wrisigo_admin',
+        password: 'CS148Bob',
+        database: 'WRISIGO_Dogs',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'localhost',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'root',
+        password: 'CSBob148',
+        database: 'sys',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+Pool {
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  config:
+   PoolConfig {
+     acquireTimeout: 10000,
+     connectionConfig:
+      ConnectionConfig {
+        host: 'localhost',
+        port: 3306,
+        localAddress: undefined,
+        socketPath: undefined,
+        user: 'root',
+        password: 'CSBob148',
+        database: 'sys',
+        connectTimeout: 10000,
+        insecureAuth: false,
+        supportBigNumbers: false,
+        bigNumberStrings: false,
+        dateStrings: false,
+        debug: undefined,
+        trace: true,
+        stringifyObjects: false,
+        timezone: 'local',
+        flags: '',
+        queryFormat: undefined,
+        pool: [Circular],
+        ssl: false,
+        multipleStatements: false,
+        typeCast: true,
+        maxPacketSize: 0,
+        charsetNumber: 33,
+        clientFlags: 455631 },
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0 },
+  _acquiringConnections: [],
+  _allConnections: [],
+  _freeConnections: [],
+  _connectionQueue: [],
+  _closed: false }
+[ RowDataPacket {
+    fldName: 'Greta',
+    fldBreed: 'Mix',
+    fldPhoto: 'ddd',
+    fldAge: 3,
+    fldDescription: 'Awsome Dog',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Wiener-Dog',
+    fldPhoto: 'fdff',
+    fldAge: 32,
+    fldDescription: 'This Dog',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'George',
+    fldBreed: 'Mixed-bull',
+    fldPhoto: 'fdff',
+    fldAge: 32,
+    fldDescription: 'This Dog',
+    pfkStatus: 'Foster' } ]
+[ RowDataPacket {
+    fldName: 'Greta',
+    fldBreed: 'Mix',
+    fldPhoto: 'ddd',
+    fldAge: 3,
+    fldDescription: 'Awsome Dog',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Wiener-Dog',
+    fldPhoto: 'fdff',
+    fldAge: 32,
+    fldDescription: 'This Dog',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'George',
+    fldBreed: 'Mixed-bull',
+    fldPhoto: 'fdff',
+    fldAge: 32,
+    fldDescription: 'This Dog',
+    pfkStatus: 'Foster' } ]
+[ RowDataPacket {
+    fldName: 'Greta',
+    fldBreed: 'Mix',
+    fldPhoto: 'ddd',
+    fldAge: 3,
+    fldDescription: 'Awsome Dog',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Wiener-Dog',
+    fldPhoto: 'fdff',
+    fldAge: 32,
+    fldDescription: 'This Dog',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'George',
+    fldBreed: 'Mixed-bull',
+    fldPhoto: 'fdff',
+    fldAge: 32,
+    fldDescription: 'This Dog',
+    pfkStatus: 'Foster' } ]
+[ RowDataPacket {
+    fldName: 'Greta',
+    fldBreed: 'Mix',
+    fldPhoto: 'ddd',
+    fldAge: 3,
+    fldDescription: 'Awsome Dog',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Wiener-Dog',
+    fldPhoto: 'fdff',
+    fldAge: 32,
+    fldDescription: 'This Dog',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'George',
+    fldBreed: 'Mixed-bull',
+    fldPhoto: 'fdff',
+    fldAge: 32,
+    fldDescription: 'This Dog',
+    pfkStatus: 'Foster' } ]
+[ RowDataPacket {
+    fldName: 'Greta',
+    fldBreed: 'Mix',
+    fldPhoto: 'ddd',
+    fldAge: 3,
+    fldDescription: 'Awsome Dog',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Wiener-Dog',
+    fldPhoto: 'fdff',
+    fldAge: 32,
+    fldDescription: 'This Dog',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'George',
+    fldBreed: 'Mixed-bull',
+    fldPhoto: 'fdff',
+    fldAge: 32,
+    fldDescription: 'This Dog',
+    pfkStatus: 'Foster' } ]
+[ RowDataPacket {
+    fldName: 'Greta',
+    fldBreed: 'Mix',
+    fldPhoto: 'ddd',
+    fldAge: 3,
+    fldDescription: 'Awsome Dog',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Wiener-Dog',
+    fldPhoto: 'fdff',
+    fldAge: 32,
+    fldDescription: 'This Dog',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'George',
+    fldBreed: 'Mixed-bull',
+    fldPhoto: 'fdff',
+    fldAge: 32,
+    fldDescription: 'This Dog',
+    pfkStatus: 'Foster' } ]
+Grabbed News
+[ RowDataPacket {
+    pmkNewsId: 1,
+    fldAuthor: 'Someone',
+    fldTitle: 'Somthing',
+    fldDate: 2018-12-12T05:00:00.000Z,
+    fldContent: 'fksdjfdsf' },
+  RowDataPacket {
+    pmkNewsId: 2,
+    fldAuthor: 'Someone',
+    fldTitle: 'Somthing',
+    fldDate: 2018-12-12T05:00:00.000Z,
+    fldContent: 'fksdjfdsf' },
+  RowDataPacket {
+    pmkNewsId: 3,
+    fldAuthor: 'This guy',
+    fldTitle: 'forever',
+    fldDate: 2018-10-07T04:00:00.000Z,
+    fldContent: 'Burlington vt somewhere' } ]
+1
+{ fldName: 'Henry',
+  fldBreed: 'Wiener-Dog',
+  fldAge: '32',
+  fldDescription: 'This Dog',
+  fldPhoto: 'golden_retriever.jpg' }
+1
+1
+{ fldName: 'Henry',
+  fldBreed: 'Golden Retriever',
+  fldAge: '1',
+  fldDescription: 'Great Around Family\'s',
+  fldPhoto: 'golden_retriever.jpg' }
+1
+2
+{ fldName: 'Henry',
+  fldBreed: 'Golden Retriever',
+  fldAge: '1',
+  fldDescription: 'Great Around Family\'s',
+  fldPhoto: 'golden_retriever.jpg' }
+2
+3
+{ fldName: 'Henry',
+  fldBreed: 'Golden Retriever',
+  fldAge: '1',
+  fldDescription: 'Great Around Family\'s',
+  fldPhoto: 'golden_retriever.jpg' }
+3
+4
+{ fldName: 'Henry',
+  fldBreed: 'Golden Retriever',
+  fldAge: '1',
+  fldDescription: 'Great Around Family\'s',
+  fldPhoto: 'golden_retriever.jpg' }
+4
+5
+{ fldName: 'Henry',
+  fldBreed: 'Golden Retriever',
+  fldAge: '1',
+  fldDescription: 'Great Around Family\'s',
+  fldPhoto: 'golden_retriever.jpg' }
+5
+6
+{ fldName: 'Henry',
+  fldBreed: 'Golden Retriever',
+  fldAge: '1',
+  fldDescription: 'Great Around Family\'s',
+  fldPhoto: 'golden_retriever.jpg' }
+6
+7
+{ fldName: 'Henry',
+  fldBreed: 'Golden Retriever',
+  fldAge: '1',
+  fldDescription: 'Great Around Family\'s',
+  fldPhoto: 'golden_retriever.jpg' }
+7
+[ RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Foster' } ]
+[ RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Foster' } ]
+[ RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Foster' } ]
+[ RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Foster' } ]
+[ RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Foster' } ]
+Grabbed News
+[ RowDataPacket {
+    pmkNewsId: 1,
+    fldAuthor: 'Someone',
+    fldTitle: 'Somthing',
+    fldDate: 2018-12-12T05:00:00.000Z,
+    fldContent: 'fksdjfdsf' },
+  RowDataPacket {
+    pmkNewsId: 2,
+    fldAuthor: 'Someone',
+    fldTitle: 'Somthing',
+    fldDate: 2018-12-12T05:00:00.000Z,
+    fldContent: 'fksdjfdsf' },
+  RowDataPacket {
+    pmkNewsId: 3,
+    fldAuthor: 'This guy',
+    fldTitle: 'forever',
+    fldDate: 2018-10-07T04:00:00.000Z,
+    fldContent: 'Burlington vt somewhere' } ]
+[ RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Foster' } ]
+[ RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Foster' } ]
+[ RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Available' },
+  RowDataPacket {
+    fldName: 'Henry',
+    fldBreed: 'Golden Retriever',
+    fldPhoto: 'golden_retriever.jpg',
+    fldAge: 1,
+    fldDescription: 'Great Around Family\'s',
+    pfkStatus: 'Foster' } ]
+Grabbed News
+[ RowDataPacket {
+    pmkNewsId: 1,
+    fldAuthor: 'Someone',
+    fldTitle: 'Somthing',
+    fldDate: 2018-12-12T05:00:00.000Z,
+    fldContent: 'fksdjfdsf' },
+  RowDataPacket {
+    pmkNewsId: 2,
+    fldAuthor: 'Someone',
+    fldTitle: 'Somthing',
+    fldDate: 2018-12-12T05:00:00.000Z,
+    fldContent: 'fksdjfdsf' },
+  RowDataPacket {
+    pmkNewsId: 3,
+    fldAuthor: 'This guy',
+    fldTitle: 'forever',
+    fldDate: 2018-10-07T04:00:00.000Z,
+    fldContent: 'Burlington vt somewhere' } ]
