@@ -1,0 +1,8 @@
+{
+  "env": {
+    "host": "localhost",
+    "user": "root",
+    "password": "CSBob148",
+    "database": "sys"
+  }
+}
