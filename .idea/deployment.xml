@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="silk">
+  <component name="PublishConfigData">
     <serverData>
-      <paths name="silk">
+      <paths name="silk (project level)">
         <serverdata>
           <mappings>
-            <mapping deploy="/www-root/cs148/FinalDev/VermontDogs" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/www-root/cs148/" local="$PROJECT_DIR$" web="https://wrisigo.w3.uvm.edu/" />
           </mappings>
         </serverdata>
       </paths>

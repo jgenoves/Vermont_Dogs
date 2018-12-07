@@ -10,7 +10,7 @@ const router = express.Router();
 router.get('/', async (req,res)=>{
     try {
         const dogs = await db.queryTags();
-        res.send(dogs)
+        res.json(dogs)
     }
     catch (e) {
         console.log('ERROR', e.message);
@@ -22,7 +22,7 @@ router.get('/:id', async (req,res)=>{
     try {
         const id = req.params.id;
         const dogs = await db.queryTagbyId(id);
-        res.send(dogs)
+        res.json(dogs)
     }
     catch (e) {
         console.log('ERROR', e.message);
@@ -41,7 +41,7 @@ router.post('/', async (req,res)=>{
         let values = [];
         values.push([insertData.fldTag]);
         const added = await db.insertTag(values);
-        res.send(added);
+        res.json(added);
         console.log(added);
     }catch (e) {
         console.log('ERROR', e.message);
@@ -65,7 +65,7 @@ router.put('/:id', async (req, res) => {
         let values = [];
         values.push([updateData.fldTag]);
         const added = await db.updateTag(req.body,id);
-        res.send(added);
+        res.json(added);
     } catch (e) {
         console.log('ERROR', e.message);
     }

@@ -3,13 +3,14 @@ const express = require('express');
 const db = require('../db')
 const router = express.Router();
 
-
+//insert into news
+//get news
 
 //GET Adoptable and Fosterable DOGS
 router.get('/', async (req,res)=>{
     try {
         const dogs = await db.queryAvailbleDogs();
-        res.send(dogs)
+        res.json(dogs)
     }
     catch (e) {
         console.log('ERROR', e.message);
@@ -21,7 +22,7 @@ router.get('/', async (req,res)=>{
 router.get('/Adoptable', async (req,res)=>{
     try {
         const name = await db.queryAdoptableDogs();
-        res.send(name)
+        res.json(name)
     }
     catch (e) {
         console.log('ERROR', e.message);
@@ -32,7 +33,7 @@ router.get('/Adoptable', async (req,res)=>{
 router.get('/Adopted', async (req,res)=>{
     try {
         const name = await db.queryAdoptedDogs();
-        res.send(name)
+        res.json(name)
     }
     catch (e) {
         console.log('ERROR', e.message);
@@ -45,7 +46,7 @@ router.get('/:name', async (req,res)=>{
     try {
         const name = req.params.name;
         const dogs = await db.queryDogStatusbyName(name);
-        res.send(dogs)
+        res.json(dogs)
     }
     catch (e) {
         console.log('ERROR', e.message);
@@ -63,7 +64,7 @@ router.post('/', async (req,res)=>{
         let values = [];
         values.push([insertData.pfkDogs, insertData.pfkPeople, insertData.pfkStatus]);
         const added = await db.insertDogStatus(values);
-        res.send(added);
+        res.json(added);
         console.log(added);
     }catch (e) {
         console.log('ERROR', e.message);
@@ -87,7 +88,7 @@ router.put('/:id', async (req, res) => {
         let values = [];
         values.push([updateData.pfkDogs, updateData.pfkPeople, updateData.pfkStatus]);
         const added = await db.updateDogStatus(req.body,id);
-        res.send(added);
+        res.json(added);
     } catch (e) {
         console.log('ERROR', e.message);
     }

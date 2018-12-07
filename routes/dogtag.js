@@ -21,14 +21,13 @@ router.post('/', async (req,res)=>{
 });
 
 
-
 //GET Adoptable and Fosterable DOGS by NAME
 //Takes Dog Id and matches all tags associated with it
 router.get('/:id', async (req,res)=>{
     try {
         const id = req.params.id;
         const dogs = await db.queryDogTagbyId(id);
-        res.send(dogs)
+        res.json(dogs)
     }
     catch (e) {
         console.log('ERROR', e.message);

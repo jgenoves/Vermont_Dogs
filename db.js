@@ -1,18 +1,21 @@
 var mysql = require('mysql');
 
-const env = process.env.NODE_ENV;
 const config = require('config');
 var state = {
-    pool: null,
-    env: null,
+    pool: null
 }
 
-function connect(env) {
+function connect(mode) {
     console.log("This is the Enviorment: ");
-    console.log(env);
+    console.log(mode);
     return new Promise((resolve, reject) => {
-            state.pool = mysql.createPool(env);
-        state.env = env;
+        state.pool = mysql.createPool({
+            host: 'webdb.uvm.edu',
+            user: 'wrisigo_admin',
+            password: 'CS148Bob',
+            database: 'WRISIGO_DOGS',
+            connectTimeout: 10000
+        });
         resolve();
         reject(new Error('Failed to Connect'));
     });
@@ -39,9 +42,18 @@ function get(type) {
 function queryDogbyId(id){
 return new Promise((resolve, reject) => {
     let pool = state.pool;
-    pool.query('SELECT `pmkDogs`, `fldName`,`fldBreed`,`fldPhoto`,`fldAge`,`fldDescription` FROM`tblDogs` WHERE ? = pmkDogs', id,
+    console.log(pool.host);
+    console.log(pool.database);
+    console.log(pool.password);
+    console.log(pool.user);
+
+
+    pool.query('SELECT `pmkDogs`, `fldName`,`fldBreed`,`fldPhoto`,`fldAge`,`fldDescription` FROM `tblDogs` WHERE ? = pmkDogs', id,
         (err,result)=>{
-            if(err) throw err
+            if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
             resolve(result);
             reject(new Error('There is no dog with id ==' + id))
         }
@@ -337,6 +349,40 @@ function DELETE_Tags() {
     })
 }
 
+///////////////////////////////////////////////////News///////////////////////////////////////////////////
+
+function insertNews(values) {
+    return new Promise((resolve, reject) => {
+        let pool = state.pool;
+        console.log(values);
+        pool.query('INSERT INTO `tblNews` (`fldAuthor`, `fldTitle`, `fldDate`, `fldContent`) VALUES ?', [values],
+            (err,result)=>{
+                if(err) throw err
+                resolve(result);
+                reject(new Error('ERROR IN News query: DB.js'));
+            }
+        );
+    });
+}
+
+function queryNews(){
+    return new Promise((resolve, reject) => {
+        let pool = state.pool;
+        pool.query('SELECT `pmkNewsId`, `fldAuthor`, `fldTitle`, `fldDate`, `fldContent` FROM`tblNews`',
+            (err,result)=>{
+                if(err) throw err
+                resolve(result);
+                reject(new Error('There is no dog with'))
+            }
+        );
+    })
+}
+
+
+
+
+
+
 
 
 //DOGS
@@ -364,6 +410,9 @@ exports.queryDogTagbyId = queryDogTagbyId;
 exports.insertDogTag = insertDogTag;
 exports.DELETE_Tags = DELETE_Tags;
 exports.queryDogTagbyId = queryDogTagbyId;
+//News
+exports.insertNews = insertNews;
+exports.queryNews = queryNews;
 
 
 //DATABASE

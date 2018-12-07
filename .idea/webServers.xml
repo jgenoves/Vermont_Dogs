@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="95409e7c-b454-4538-b178-23c019978148" name="silk" url="http://w3.uvm.edu">
+      <webServer id="95409e7c-b454-4538-b178-23c019978148" name="silk (project level)" url="http://w3.uvm.edu">
         <fileTransfer host="w3.uvm.edu" port="22" rootFolder="/users/w/r/wrisigo" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />

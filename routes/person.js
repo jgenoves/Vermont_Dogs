@@ -14,7 +14,7 @@ router.post('/', async (req,res)=>{
         let values = [];
         values.push([insertData.fldFirstName, insertData.fldLastName, insertData.fldAddress, insertData.fldEmail, insertData.fldPhoneNumber]);
         const added = await db.insertPerson(values);
-        res.send(added);
+        res.json(added);
         console.log(added);
     }catch (e) {
         console.log('ERROR', e.message);
@@ -25,7 +25,7 @@ router.post('/', async (req,res)=>{
 router.get('/:id', async (req, res) => {
     try {
         const name = await db.queryPersonbyId(req.params.id);
-        res.send(name)
+        res.json(name)
     } catch (e) {
         console.log('ERROR', e.message);
     }
@@ -46,7 +46,7 @@ router.put('/:id', async (req, res) => {
         let values = [];
         values.push([updateData.fldFirstName, updateData.fldLastName, updateData.fldAddress, updateData.fldEmail, updateData.fldPhoneNumber]);
         const added = await db.updatePerson(req.body,id);
-        res.send(added);
+        res.json(added);
     } catch (e) {
         console.log('ERROR', e.message);
     }

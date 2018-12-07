@@ -13,7 +13,7 @@ router.post('/', async (req,res)=>{
         let values = [];
             values.push([insertData.fldName, insertData.fldBreed, insertData.fldAge, insertData.fldDescription, insertData.fldPhoto]);
        const added = await db.insertDog(values);
-       res.send(added);
+       res.json(added);
         console.log(added);
     }catch (e) {
         console.log('ERROR', e.message);
@@ -24,7 +24,7 @@ router.post('/', async (req,res)=>{
 router.get('/:id', async (req, res) => {
     try {
         const name = await db.queryDogbyId(req.params.id);
-        res.send(name)
+        res.json(name)
     } catch (e) {
         console.log('ERROR', e.message);
     }
@@ -47,7 +47,7 @@ router.put('/:id', async (req, res) => {
         let values = [];
         values.push([updateData.fldName, updateData.fldBreed, updateData.fldAge, updateData.fldDescription, updateData.fldPhoto]);
         const added = await db.updateDog(req.body,id);
-        res.send(added);
+        res.json(added);
     } catch (e) {
         console.log('ERROR', e.message);
     }
