@@ -42,13 +42,12 @@ console.error = console.log;
 //     res.send(datetime);
 // });
 app.use(bodyParser.json());
-app.use('/dogs', dogs);
-app.use('/person', person);
-app.use('/status', status);
-app.use('/tags', tags)
-app.use('/dogtag', dogtag);
+app.use('/api/dogs', dogs);
+app.use('/api/person', person);
+app.use('/api/tags', tags)
+app.use('/api/dogtag', dogtag);
 app.use('/api/news', news);
-app.use('/OurDogs', status);
+//app.use('/OurDogs', status);
 // app.use((req, res, next) => {
 //     res.header(
 //         "Access-Control-Allow-Origin",

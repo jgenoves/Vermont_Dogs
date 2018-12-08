@@ -24,6 +24,8 @@ export default class Dog extends Component {
                         <p className={css}>Breed: {this.props.dogData.fldBreed}</p>
                         <br/>
                         <p className={css}>Description: {this.props.dogData.fldDescription}</p>
+                        <br/>
+                        <p className={css}>Status: {this.props.dogData.fldStatus}</p>
                     </article>
                 </li>
 

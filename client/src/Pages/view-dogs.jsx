@@ -14,7 +14,7 @@ export default class ViewDogs extends Component {
     };
 
     componentDidMount() {
-        fetch('/Dogs')
+        fetch('/api/dogs')
             .then(res => res.json())
             .then(dogs => this.setState( { dogs } ))
             .catch(()=>{

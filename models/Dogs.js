@@ -7,7 +7,8 @@ function validateDogs(dogs){
         fldBreed: Joi.string().min(5).max(50).required(),
         fldAge: Joi.string().min(1).max(2).required(),
         fldDescription: Joi.string().min(3).required(),
-        fldPhoto: Joi.string().min(4).max(50)
+        fldPhoto: Joi.string().min(4).max(50),
+        fldStatus: Joi.string().min(4).max(50)
     }
     return Joi.validate(dogs, schema);
 }

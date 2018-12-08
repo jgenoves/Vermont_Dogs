@@ -4,25 +4,28 @@ const db = require('../db')
 const router = express.Router();
 
 
-        //INSERT A DOG
-router.post('/', async (req,res)=>{
+
+
+//GET DOG ALL DOGS
+router.get('/', async (req, res) => {
     try {
-        const {error} = valid.validateDogs(req.body);
-        if (error) return res.status(400).send(error.details[0].message);
-        let insertData = req.body;
-        let values = [];
-            values.push([insertData.fldName, insertData.fldBreed, insertData.fldAge, insertData.fldDescription, insertData.fldPhoto]);
-       const added = await db.insertDog(values);
-       res.json(added);
-        console.log(added);
-    }catch (e) {
+        const name = await db.queryAdoptableDogs();
+        res.json(name)
+    } catch (e) {
         console.log('ERROR', e.message);
     }
 });
 
+router.get('/Foster', async (req, res) => {
+    try {
+        const name = await db.queryFosterable();
+        res.json(name)
+    } catch (e) {
+        console.log('ERROR', e.message);
+    }
+});
 
-//GET DOG BY ID
-router.get('/', async (req, res) => {
+router.get('/All', async (req, res) => {
     try {
         const name = await db.queryAllDogs();
         res.json(name)
@@ -30,6 +33,19 @@ router.get('/', async (req, res) => {
         console.log('ERROR', e.message);
     }
 });
+
+
+router.get('/Adopted', async (req, res) => {
+    try {
+        const name = await db.queryAdoptedDogs();
+        res.json(name)
+    } catch (e) {
+        console.log('ERROR', e.message);
+    }
+});
+
+
+
 
 
         //GET DOG BY ID
@@ -41,6 +57,24 @@ router.get('/:id', async (req, res) => {
         console.log('ERROR', e.message);
     }
 });
+
+
+//INSERT A DOG
+router.post('/', async (req,res)=>{
+    try {
+        const {error} = valid.validateDogs(req.body);
+        if (error) return res.status(400).send(error.details[0].message);
+        let insertData = req.body;
+        let values = [];
+        values.push([insertData.fldName, insertData.fldBreed, insertData.fldAge, insertData.fldDescription, insertData.fldPhoto, updateData.fldStatus]);
+        const added = await db.insertDog(values);
+        res.json(added);
+        console.log(added);
+    }catch (e) {
+        console.log('ERROR', e.message);
+    }
+});
+
 
     //UPDATE DOG BY ID
 router.put('/:id', async (req, res) => {
@@ -57,7 +91,7 @@ router.put('/:id', async (req, res) => {
         if (error) return res.status(400).send(error.details[0].message);
         let updateData = req.body;
         let values = [];
-        values.push([updateData.fldName, updateData.fldBreed, updateData.fldAge, updateData.fldDescription, updateData.fldPhoto]);
+        values.push([updateData.fldName, updateData.fldBreed, updateData.fldAge, updateData.fldDescription, updateData.fldPhoto, updateData.fldStatus]);
         const added = await db.updateDog(req.body,id);
         res.json(added);
     } catch (e) {

@@ -9,13 +9,7 @@ function connect(mode) {
     console.log("This is the Enviorment: ");
     console.log(mode);
     return new Promise((resolve, reject) => {
-        state.pool = mysql.createPool({
-            host: 'webdb.uvm.edu',
-            user: 'wrisigo_admin',
-            password: 'CS148Bob',
-            database: 'WRISIGO_DOGS',
-            connectTimeout: 10000
-        });
+        state.pool = mysql.createPool(mode);
         resolve();
         reject(new Error('Failed to Connect'));
     });
@@ -47,7 +41,7 @@ function queryAllDogs(){
         console.log(pool.database);
         console.log(pool.password);
         console.log(pool.user);
-        pool.query('SELECT * tblDogs',
+        pool.query('SELECT * from tblDogs',
             (err,result)=>{
                 if(err) {
                     console.log(err.code);
@@ -59,6 +53,72 @@ function queryAllDogs(){
         );
     })
 }
+//GETS ADOPTABLE DOGS
+function queryAdoptableDogs(){
+    return new Promise((resolve, reject) => {
+        let pool = state.pool;
+        console.log(pool.host);
+        console.log(pool.database);
+        console.log(pool.password);
+        console.log(pool.user);
+        pool.query('SELECT * FROM tblDogs WHERE `fldStatus` = "Available" OR `fldStatus` = "Fostered"',
+            (err,result)=>{
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
+                resolve(result);
+                reject(new Error('There is no dog with id =='))
+            }
+        );
+    })
+}
+
+//GETS ADOPTABLE DOGS
+function queryAdoptedDogs(){
+    return new Promise((resolve, reject) => {
+        let pool = state.pool;
+        console.log(pool.host);
+        console.log(pool.database);
+        console.log(pool.password);
+        console.log(pool.user);
+        pool.query('SELECT * FROM tblDogs WHERE `fldStatus` = "Adopted"',
+            (err,result)=>{
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
+                resolve(result);
+                reject(new Error('Error getting dogs'))
+            }
+        );
+    })
+}
+
+
+//GETS ADOPTABLE DOGS
+function queryFosterable(){
+    return new Promise((resolve, reject) => {
+        let pool = state.pool;
+        console.log(pool.host);
+        console.log(pool.database);
+        console.log(pool.password);
+        console.log(pool.user);
+        pool.query('SELECT * FROM tblDogs WHERE `fldStatus` = "Available"',
+            (err,result)=>{
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
+                resolve(result);
+                reject(new Error('There is no dog with id =='))
+            }
+        );
+    })
+}
+
+
+
 
 function queryDogbyId(id){
 return new Promise((resolve, reject) => {
@@ -82,12 +142,34 @@ return new Promise((resolve, reject) => {
 })
 }
 
+function queryDogStatusbyName(name){
+    return new Promise((resolve, reject) => {
+        let pool = state.pool;
+        console.log(pool.host);
+        console.log(pool.database);
+        console.log(pool.password);
+        console.log(pool.user);
+
+
+        pool.query('SELECT `fldStatus` FROM `tblDogs` WHERE `fldName`= ?', name,
+            (err,result)=>{
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
+                resolve(result);
+                reject(new Error('There is no dog  ==' + name))
+            }
+        );
+    })
+}
+
 
 function insertDog(values) {
     return new Promise((resolve, reject) => {
         let pool = state.pool;
         console.log(values);
-        pool.query('INSERT INTO `tblDogs` (`fldName`, `fldBreed`, `fldAge`, `fldDescription`, `fldPhoto`) VALUES ?', [values],
+        pool.query('INSERT INTO `tblDogs` (`fldName`, `fldBreed`, `fldAge`, `fldDescription`, `fldPhoto`, `fldStatus`) VALUES ?', [values],
             (err,result)=>{
                 if(err) {
                     console.log(err.code);
@@ -105,8 +187,8 @@ function updateDog(values,id) {
         let pool = state.pool;
         console.log(values);
         console.log(id);
-        pool.query('UPDATE `tblDogs` SET `fldName` = ?, `fldBreed` = ?, `fldAge` = ?, `fldDescription` = ?, `fldPhoto` = ? WHERE `pmkDogs` = ?',
-            [values.fldName, values.fldBreed,values.fldAge,values.fldDescription,values.fldPhoto, id],
+        pool.query('UPDATE `tblDogs` SET `fldName` = ?, `fldBreed` = ?, `fldAge` = ?, `fldDescription` = ?, `fldPhoto` = ? `fldStatus` = ?  WHERE `pmkDogs` = ?',
+            [values.fldName, values.fldBreed,values.fldAge,values.fldDescription,values.fldPhoto, values.fldPhoto, id],
             (err,result)=>{
                 if(err) {
                     console.log(err.code);
@@ -172,129 +254,130 @@ function updatePerson(values,id) {
             }
         );
     });
-}
 
 
-///////////////////////////////////////////////////DogStatus///////////////////////////////////////////////////
 
-//Insert Dog Status
-function insertDogStatus(values) {
-    return new Promise((resolve, reject) => {
-        let pool = state.pool;
-        console.log(values);
-        pool.query('INSERT INTO `tblDogStatus` (`pfkDogs`, `pfkPeople`, `pfkStatus`) VALUES ?', [values],
-            (err,result)=>{
-                if(err) {
-                    console.log(err.code);
-                    console.log(err.fatal);
-                }
-                resolve(result);
-                reject(new Error('error'));
-            }
-        );
-    });
-}
+///////////////////////////////////////////////////DogStatus - NOT USED///////////////////////////////////////////////////
 
-//Can be Fostered OR ADOPTED
-function queryAvailbleDogs() {
-    return new Promise((resolve, reject) => {
-        let pool = state.pool;
-        pool.query('SELECT`fldName`,`fldBreed`,`fldPhoto`,`fldAge`,`fldDescription`,`pfkStatus`' +
-            'FROM`tblDogs`' +
-            'JOIN`tblDogStatus` ' +
-            'ON `pmkDogs` = `pfkDogs`' +
-            'WHERE `pfkStatus` = "Available" OR `pfkStatus` = "Foster"',
-            (err,result)=>{
-                if(err) {
-                console.log(err.code);
-                console.log(err.fatal);
-            }
-                resolve(result);
-                reject(new Error('Error!'))
-            }
-        );
-    })
-}
+// //Insert Dog Status
+// function insertDogStatus(values) {
+//     return new Promise((resolve, reject) => {
+//         let pool = state.pool;
+//         console.log(values);
+//         pool.query('INSERT INTO `tblDogStatus` (`pfkDogs`, `pfkPeople`, `pfkStatus`) VALUES ?', [values],
+//             (err,result)=>{
+//                 if(err) {
+//                     console.log(err.code);
+//                     console.log(err.fatal);
+//                 }
+//                 resolve(result);
+//                 reject(new Error('error'));
+//             }
+//         );
+//     });
+// }
+//
 
-function queryAdoptedDogs() {
-    return new Promise((resolve, reject) => {
-        let pool = state.pool;
-        pool.query('SELECT`fldName`,`fldBreed`,`fldPhoto`,`fldAge`,`fldDescription`,`pfkStatus`' +
-            'FROM`tblDogs`' +
-            'JOIN`tblDogStatus` ' +
-            'ON `pmkDogs` = `pfkDogs`' +
-            'WHERE `pfkStatus` = "Adopted" ',
-            (err,result)=>{
-                if(err) {
-                console.log(err.code);
-                console.log(err.fatal);
-            }
-                resolve(result);
-                reject(new Error('Error!'))
-            }
-        );
-    })
-}
+// //Can be Fostered OR ADOPTED
+// function queryAvailbleDogs() {
+//     return new Promise((resolve, reject) => {
+//         let pool = state.pool;
+//         pool.query('SELECT`fldName`,`fldBreed`,`fldPhoto`,`fldAge`,`fldDescription`,`pfkStatus`' +
+//             'FROM`tblDogs`' +
+//             'JOIN`tblDogStatus` ' +
+//             'ON `pmkDogs` = `pfkDogs`' +
+//             'WHERE `pfkStatus` = "Available" OR `pfkStatus` = "Foster"',
+//             (err,result)=>{
+//                 if(err) {
+//                 console.log(err.code);
+//                 console.log(err.fatal);
+//             }
+//                 resolve(result);
+//                 reject(new Error('Error!'))
+//             }
+//         );
+//     })
+// }
+//
+// function queryAdoptedDogs() {
+//     return new Promise((resolve, reject) => {
+//         let pool = state.pool;
+//         pool.query('SELECT`fldName`,`fldBreed`,`fldPhoto`,`fldAge`,`fldDescription`,`pfkStatus`' +
+//             'FROM`tblDogs`' +
+//             'JOIN`tblDogStatus` ' +
+//             'ON `pmkDogs` = `pfkDogs`' +
+//             'WHERE `pfkStatus` = "Adopted" ',
+//             (err,result)=>{
+//                 if(err) {
+//                 console.log(err.code);
+//                 console.log(err.fatal);
+//             }
+//                 resolve(result);
+//                 reject(new Error('Error!'))
+//             }
+//         );
+//     })
+// }
+//
+// function queryAdoptableDogs() {
+//     return new Promise((resolve, reject) => {
+//         let pool = state.pool;
+//         pool.query('SELECT`fldName`,`fldBreed`,`fldPhoto`,`fldAge`,`fldDescription`,`pfkStatus`' +
+//             'FROM`tblDogs`' +
+//             'JOIN`tblDogStatus` ' +
+//             'ON `pmkDogs` = `pfkDogs`' +
+//             'WHERE `pfkStatus` = "Available" ',
+//             (err,result)=>{
+//                 if(err) {
+//                 console.log(err.code);
+//                 console.log(err.fatal);
+//             }
+//                 resolve(result);
+//                 reject(new Error('Error!'))
+//             }
+//         );
+//     })
+// }
+//
+//
+// function updateDogStatus(values,id) {
+//     return new Promise((resolve, reject) => {
+//         let pool = state.pool;
+//         console.log(values);
+//         console.log(id);
+//         pool.query('UPDATE `tblDogStatus` SET `pfkDogs` = ?, `pfkPeople` = ?, `pfkStatus` = ? WHERE `pfkDog` = ?',
+//             [values.fldFirstName, values.fldLastName,values.fldAddress,values.fldEmail,values.fldPhoneNumber, id],
+//             (err,result)=>{
+//                 if(err) {
+//                 console.log(err.code);
+//                 console.log(err.fatal);
+//             }
+//                 resolve(result);
+//                 reject(new Error('error'));
+//             }
+//         );
+//     });
+// }
 
-function queryAdoptableDogs() {
-    return new Promise((resolve, reject) => {
-        let pool = state.pool;
-        pool.query('SELECT`fldName`,`fldBreed`,`fldPhoto`,`fldAge`,`fldDescription`,`pfkStatus`' +
-            'FROM`tblDogs`' +
-            'JOIN`tblDogStatus` ' +
-            'ON `pmkDogs` = `pfkDogs`' +
-            'WHERE `pfkStatus` = "Available" ',
-            (err,result)=>{
-                if(err) {
-                console.log(err.code);
-                console.log(err.fatal);
-            }
-                resolve(result);
-                reject(new Error('Error!'))
-            }
-        );
-    })
-}
-
-
-function updateDogStatus(values,id) {
-    return new Promise((resolve, reject) => {
-        let pool = state.pool;
-        console.log(values);
-        console.log(id);
-        pool.query('UPDATE `tblDogStatus` SET `pfkDogs` = ?, `pfkPeople` = ?, `pfkStatus` = ? WHERE `pfkDog` = ?',
-            [values.fldFirstName, values.fldLastName,values.fldAddress,values.fldEmail,values.fldPhoneNumber, id],
-            (err,result)=>{
-                if(err) {
-                console.log(err.code);
-                console.log(err.fatal);
-            }
-                resolve(result);
-                reject(new Error('error'));
-            }
-        );
-    });
-}
-
-//QueryDogs by Name
-function queryDogStatusbyName(name) {
-    return new Promise((resolve, reject) => {
-        let pool = state.pool;
-        pool.query('SELECT`fldName`,`fldBreed`,`fldPhoto`,`fldAge`,`fldDescription`,`pfkStatus`' +
-            'FROM`tblDogs`' +
-            'JOIN`tblDogStatus` ' +
-            'ON `pmkDogs` = `pfkDogs`' +
-            'WHERE (`pfkStatus` = "Available") OR (`pfkStatus` = "Foster") AND (`fldName`= ?)', [name],
-            (err,result)=>{
-                if(err) {
-                console.log(err.code);
-                console.log(err.fatal);
-            }
-                resolve(result);
-                reject(new Error('Error!'))
-            }
-        );
-    })
+// //QueryDogs by Name
+// function queryDogStatusbyName(name) {
+//     return new Promise((resolve, reject) => {
+//         let pool = state.pool;
+//         pool.query('SELECT`fldName`,`fldBreed`,`fldPhoto`,`fldAge`,`fldDescription`,`pfkStatus`' +
+//             'FROM`tblDogs`' +
+//             'JOIN`tblDogStatus` ' +
+//             'ON `pmkDogs` = `pfkDogs`' +
+//             'WHERE (`pfkStatus` = "Available") OR (`pfkStatus` = "Foster") AND (`fldName`= ?)', [name],
+//             (err,result)=>{
+//                 if(err) {
+//                 console.log(err.code);
+//                 console.log(err.fatal);
+//             }
+//                 resolve(result);
+//                 reject(new Error('Error!'))
+//             }
+//         );
+//     })
 }
 ///////////////////////////////////////////////////TAGS///////////////////////////////////////////////////
 
@@ -468,16 +551,17 @@ exports.queryAllDogs = queryAllDogs;
 exports.updateDog = updateDog;
 exports.queryDogbyId=queryDogbyId;
 exports.insertDog =insertDog;
+exports.queryFosterable =queryFosterable;
+exports.queryAdoptableDogs =queryAdoptableDogs;
+exports.queryDogStatusbyName =queryDogStatusbyName;
 //PEROPLE
 exports.insertPerson =insertPerson;
 exports.updatePerson = updatePerson;
 exports.queryPersonbyId=queryPersonbyId;
-//DogsStatus
-exports.insertDogStatus =insertDogStatus;
-exports.updateDogStatus =updateDogStatus;
-exports.queryAvailbleDogs =queryAvailbleDogs;
-exports.queryAdoptableDogs =queryAdoptableDogs;
-exports.queryDogStatusbyName =queryDogStatusbyName;
+//DogsStatus -NOT USED
+// exports.insertDogStatus =insertDogStatus;
+// exports.updateDogStatus =updateDogStatus;
+
 exports.queryAdoptedDogs =queryAdoptedDogs;
 //Tags
 exports.queryTags = queryTags;
