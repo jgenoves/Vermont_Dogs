@@ -4,23 +4,28 @@ import Footer from '../components/footer';
 import {Field, Formik} from "formik";
 import * as Yup from "yup";
 
-
+/** This file is for adding a new News article to the DB **/
 const addNews = () => (
    <Formik
+            //Initialize Values
             initialValues={{
                 author: 'Author',
                 title: 'Title',
                 date: '12/1/12',
                 content: 'Content',
-
-
+                topic: 'default'
             }}
+
+            //Validation Schema, provided by npm library Yup
            validationSchema={Yup.object().shape({
                author: Yup.string().required("Please enter an Author"),
                title: Yup.string().required("Please provide a title"),
                date: Yup.date().required("Please enter a valid date"),
                content: Yup.string().max(255).required("Please provide content for your news post"),
+               topic: Yup.string().max(11).required("Please select a topic")
            })}
+
+            //Handling for when form is submitted
            onSubmit={(values, {resetForm, setErrors, setSubmitting}) => {
                setTimeout(() => {
                    console.log(JSON.stringify(values, null, 2));
@@ -41,6 +46,7 @@ const addNews = () => (
                }, 500);
            }}
 
+            //Rendering of form component
             render={({
                          handleSubmit,
                          setFieldValue,
@@ -51,10 +57,27 @@ const addNews = () => (
                          isSubmitting
                      }) => ( <form onSubmit={handleSubmit} method={'POST'}>
 
+                    <legend className="formLegend">Article Information</legend>
 
                     <br/>
 
-                    <legend className="formLegend">Article Information</legend>
+                    <fieldset className="formInput">
+                        <label className="formLabel">
+                            Select a topic:
+                            <Field component="select" name="topic">
+                                <option value="Update">Updates</option>
+                                <option value="URGENT">URGENT</option>
+                                <option value="New Foster">New foster</option>
+                                <option value="Good News!">Good News!</option>
+                            </Field>
+                        </label>
+                        {touched.topic && errors.topic && <p className="errors">{errors.topic}</p>}
+                    </fieldset>
+
+
+                    <br/>
+
+
                     <fieldset className="formInput">
                         <label className="formLabel">
                              Author:
@@ -96,6 +119,8 @@ const addNews = () => (
                         {touched.content && errors.content && <p className="errors">{errors.content}</p>}
                     </fieldset>
 
+
+
                 <button type="submit" disabled={isSubmitting}> Submit News Article </button>
 
                 </form>)}
@@ -107,7 +132,7 @@ const addNews = () => (
 );
 
 
-
+/** Main component for AddNews page **/
 export default class AddNews extends Component {
     render() {
         return (

@@ -4,13 +4,10 @@ import * as Yup from 'yup';
 import Top from '../components/top';
 import Footer from '../components/footer';
 
-const tags = [
-    { id: "1", name: "Good Dog"},
-    { id: "2", name: "Large"},
-    { id: "3", name: "Sheds a lot"},
+/**This file is for adding a new dog to the db **/
 
-];
 
+//This function is for rendering a singular radio button
 const RadioButton = ({
                          field: { name, value, onChange, onBlur },
                          id,
@@ -19,7 +16,7 @@ const RadioButton = ({
                          ...props
                      }) => {
     return (
-        <div>
+        <React.Fragment>
             <input
                 name={name}
                 id={id}
@@ -32,10 +29,11 @@ const RadioButton = ({
                 {...props}
             />
             <label htmlFor={id}>{label}</label>
-        </div>
+        </React.Fragment>
     );
 };
 
+//This function will render a group of radio buttons
 const RadioButtonGroup = ({
                               value,
                               error,
@@ -55,9 +53,12 @@ const RadioButtonGroup = ({
     );
 };
 
+
+//Main component for adding a new dog, made using Formik npm
 const addDog = () => (
 
         <Formik
+            //Initialize values
             initialValues={{
                 name: 'Name',
                 breed: 'Breed',
@@ -67,6 +68,8 @@ const addDog = () => (
                 status: "Available",
 
             }}
+
+            //validation schema (functions for validation done through npm library Yup
             validationSchema={Yup.object().shape({
                     name: Yup.string().required("Please enter a name"),
                     breed: Yup.string().required("Please enter a breed"),
@@ -76,6 +79,8 @@ const addDog = () => (
                     status: Yup.string().required("Please select a status")
                 })
             }
+
+            //Handling when form is submitted
             onSubmit={(values, {resetForm, setErrors, setSubmitting}) => {
                 setTimeout(() => {
                     console.log(JSON.stringify(values, null, 2));
@@ -95,6 +100,8 @@ const addDog = () => (
 
                 }, 500);
             }}
+
+            //Rendering of actual form component
             render={({
                          handleSubmit,
                          setFieldValue,
@@ -201,85 +208,8 @@ const addDog = () => (
 
 );
 
-const addTags = () => (
 
-
-        <Formik
-            initialValues={{
-                tagIds: ["1"],
-            }}
-            validationSchema={Yup.object().shape({
-                tagIds: Yup.array().required("Please select a checkbox")
-            })
-            }
-
-            onSubmit={(values, {resetForm, setErrors, setSubmitting}) => {
-                setTimeout(() => {
-                    console.log(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                    window.alert("Thank you for your tags submission!");
-                    fetch("/tags/", {
-                        method: 'POST',
-                        body: JSON.stringify(values)
-                    }).then(function (response) {
-                        if (response.status >= 400) {
-                            throw new Error("Bad response from server");
-                        }
-                        return response.json();
-                    }).then(function (values) {
-                        console.log(JSON.stringify(values, null, 2));
-                    });
-
-                }, 500);
-            }}
-
-            render={({handleSubmit,
-                setFieldValue,
-                setFieldTouched,
-                values,
-                errors,
-                touched,
-                isSubmitting}) =>  ( <form onSubmit={handleSubmit} method={'POST'}>
-
-
-                <FieldArray
-                    name="tagIds"
-                    render={arrayHelpers => (
-                        <React.Fragment>
-                            <legend>Choose some tags for your dog</legend>
-                            {tags.map(tag => (
-                                <fieldset key={tag.id}>
-                                    <label>
-
-                                        <input
-                                            name="tagIds"
-                                            type="checkbox"
-                                            value={tag.id}
-                                            checked={values.tagIds.includes(tag.id)}
-                                            onChange={e => {
-                                                if (e.target.checked) arrayHelpers.push(tag.id);
-                                                else {
-                                                    const idx = values.tagIds.indexOf(tag.id);
-                                                    arrayHelpers.remove(idx);
-                                                }
-                                            }}
-                                        />{" "}
-                                        {tag.name}
-                                    </label>
-
-                                </fieldset>
-                            ))}
-                            { touched.tagIds && errors.tagIds && <p className="errors">{errors.tagIds}</p> }
-                        </React.Fragment>
-                        ) }
-                    />
-                    <br/>
-                    <button type="submit" disabled={isSubmitting}> Submit Tags </button>
-                </form>
-            )}
-            />
-
-    );
+//Main component for running the page AddDog
 
 export default class AddDog extends Component {
 
@@ -289,7 +219,6 @@ export default class AddDog extends Component {
                 <Top/>
                 <h2 className="addDogHeader">Add a new dog to our shelter</h2>
                 {addDog()}
-                {addTags()}
                 <Footer/>
             </React.Fragment>
         );

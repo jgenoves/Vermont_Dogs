@@ -5,21 +5,25 @@ import Dog from '../components/dog.jsx'
 
 
 
+/** This component is for rendering the ViewDogs page based on each row quereied in the DB**/
 export default class ViewDogs extends Component {
+    //set array of dogs to be queried from db in the state
     state = {
         dogs: [
 
-        ]
+        ],
     };
 
-    // componentDidMount() {
-    //     fetch('/')
-    //
-    //         .then(res => res.json())
-    //         .then(dogs => this.setState( { dogs } ));
-    //
-    // }
+    //query the db
+    componentDidMount() {
+         fetch('/dogs/')
 
+             .then(res => res.json())
+             .then(dogs => this.setState( { dogs } ));
+
+     }
+
+     //render the page and each dog component based on query
     render() {
 
         return (

@@ -6,11 +6,17 @@ import ViewDogs from './Pages/view-dogs';
 import {BrowserRouter, Route} from 'react-router-dom';
 import AddDog from "./Pages/addDog";
 import AddNews from "./Pages/addNews";
+import AddUser from "./Pages/addUser";
+import EditDog from "./Pages/editDog";
+import Tables from "./Pages/tables"
 class App extends Component {
 
   render() {
 
     return (
+
+        /**This browser router is used to route the app to different pages based on the URl **/
+
         <BrowserRouter>
 
             <div>
@@ -47,6 +53,28 @@ class App extends Component {
 
                     </div>
                 )}/>
+
+                <Route exact={true} path={'/addUser'} render={() => (
+                    <div className={"App"}>
+                        <AddUser />
+
+                    </div>
+                )}/>
+
+                <Route exact={true} path={'editDog'} render={() => (
+                    <div className={"App"}>
+                        <EditDog />
+
+                    </div>
+                )}/>
+
+                <Route exact={true} path={'tables'} render={() => (
+                    <div className={"App"}>
+                        <Tables />
+
+                    </div>
+                )}/>
+
             </div>
 
         </BrowserRouter>

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+
+/**Footer for site **/
 const css = 'App-Footer';
 export default class Footer extends Component {
     render() {

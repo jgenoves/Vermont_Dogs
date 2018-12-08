@@ -7,6 +7,8 @@ import Shelter from '../AnimalShelter.jpg';
 const css = 'About-Me';
 
 
+/** This page is provide basic information about the vermont dog shelter to the user **/
+
 export default class AboutMe extends Component {
     render() {
         return <React.Fragment>

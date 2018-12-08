@@ -4,7 +4,7 @@ import logo from '../logo.png';
 
 
 
-
+/** Header for site **/
 export default class Header extends Component {
     render() {
         return (
