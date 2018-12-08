@@ -15,44 +15,40 @@ export default class Tables extends Component {
 
     };
 
-    // componentDidMount() {
-    //     fetch('/news/')
-    //         .then(res => res.json())
-    //         .then(tblNews => this.setState( { tblNews } ));
-    // };
+    componentDidMount() {
+         fetch('/news/')
+             .then(res => res.json())
+             .then(tblNews => this.setState( { tblNews } ));
 
 
-    // componentDidMount() {
-    //     fetch('/dogs/')
-    //
-    //         .then(res => res.json())
-    //         .then(tblDogs => this.setState( { tblDogs } ));
-    //
-    // }
 
-    // componentDidMount() {
-    //     fetch('/people')
-    //
-    //         .then(res => res.json())
-    //         .then(tblPeople => this.setState( { tblPeople } ));
-    //
-    // }
 
-    // componentDidMount() {
-    //     fetch('/tags')
-    //
-    //         .then(res => res.json())
-    //         .then(tblTags => this.setState( { tblTags } ));
-    //
-    // }
+         fetch('/dogs/')
 
-    // componentDidMount() {
-    //     fetch('/DogsTags')
-    //
-    //         .then(res => res.json())
-    //         .then(tblDogsTags => this.setState( { tblDogsTags } ));
-    //
-    // }
+             .then(res => res.json())
+             .then(tblDogs => this.setState( { tblDogs } ));
+
+
+
+
+         fetch('/people')
+
+             .then(res => res.json())
+             .then(tblPeople => this.setState( { tblPeople } ));
+
+
+         fetch('/tags')
+
+             .then(res => res.json())
+             .then(tblTags => this.setState( { tblTags } ));
+
+
+         fetch('/DogsTags')
+
+             .then(res => res.json())
+             .then(tblDogsTags => this.setState( { tblDogsTags } ));
+
+     };
 
 
     render() {
