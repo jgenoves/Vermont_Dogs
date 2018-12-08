@@ -3,52 +3,30 @@ import './App.css';
 import AboutMe from './Pages/about-me.jsx';
 import News from './Pages/news.jsx';
 import ViewDogs from './Pages/view-dogs';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {Route,Switch} from 'react-router-dom';
 import AddDog from "./Pages/addDog";
 
 class App extends Component {
+    render() {
+        const App = () => (
 
-  render() {
+        <div>
+        <Switch>
+                <Route exact={true} path={'/'} component={News}/>
+                <Route exact={true} path={'/news'} component={News}/>
+                <Route exact={true} path={'/AboutUs'} component={AboutMe}/>
+                <Route exact={true} path={'/OurDogs'} component={ViewDogs}/>
+                <Route exact={true} path={'/addDog'} component={AddDog}/>
 
-    return (
-        <BrowserRouter>
-
-            <div>
-                <Route exact={true} path={'/'} render={() => (
-                    <div className={"App"}>
-                        <News/>
-                    </div>
-                )}/>
-                <Route exact={true} path={'/news'} render={() => (
-                    <div className={"App"}>
-                        <News/>
-                    </div>
-            )}/>
-                <Route exact={true} path={'/AboutUs'} render={() => (
-                    <div className={"App"}>
-                        <AboutMe/>
-                    </div>
-                )}/>
-                <Route exact={true} path={'/OurDogs'} render={() => (
-                    <div className={"App"}>
-                        <ViewDogs />
-
-                    </div>
-                )}/>
-                <Route exact={true} path={'/addDog'} render={() => (
-                    <div className={"App"}>
-                        <AddDog />
-
-                    </div>
-                )}/>
-            </div>
-
-        </BrowserRouter>
-
+        </Switch>
+        </div>
     );
-  }
-
-
+        return (
+            <Switch>
+                <App/>
+            </Switch>
+        );
+    }
 }
 
 export default App;

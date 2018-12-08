@@ -14,7 +14,7 @@ export default class News extends Component {
     };
 
     componentDidMount() {
-        fetch('/news')
+        fetch('/api/news')
             .then(res => res.json())
             .then(newsArticles => this.setState( { newsArticles } ))
             .then()

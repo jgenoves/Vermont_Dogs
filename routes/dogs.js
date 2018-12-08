@@ -20,6 +20,18 @@ router.post('/', async (req,res)=>{
     }
 });
 
+
+//GET DOG BY ID
+router.get('/', async (req, res) => {
+    try {
+        const name = await db.queryAllDogs();
+        res.json(name)
+    } catch (e) {
+        console.log('ERROR', e.message);
+    }
+});
+
+
         //GET DOG BY ID
 router.get('/:id', async (req, res) => {
     try {
@@ -52,6 +64,7 @@ router.put('/:id', async (req, res) => {
         console.log('ERROR', e.message);
     }
 });
+
 
 
 

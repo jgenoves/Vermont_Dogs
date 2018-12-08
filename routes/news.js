@@ -1,8 +1,9 @@
 const valid = require('../models/News');
 const express = require('express');
 const db = require('../db')
+const path = require('path');
 const router = express.Router();
-
+const app = express();
 
 
 
@@ -36,5 +37,9 @@ router.post('/', async (req,res)=>{
     }
 });
 
+
+router.get('/*', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
 
 module.exports = router;

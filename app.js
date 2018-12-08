@@ -1,6 +1,5 @@
 process.env["NODE_CONFIG_DIR"] = __dirname + "/config/";
 const config = require('config');
-const Joi = require('joi');
 const dogs = require('./routes/dogs');
 const person = require('./routes/person');
 const status = require('./routes/dogstatus');
@@ -9,9 +8,9 @@ const dogtag = require('./routes/dogtag');
 var news = require('./routes/news')
 const express = require('express');
 const db = require('./db');
-const bodyParser = require('body-parser')
-const app = express();
+const bodyParser = require('body-parser');
 const path = require('path');
+const app = express();
 var fs = require('fs');
 var util = require('util');
 
@@ -31,6 +30,36 @@ console.log = function () {
 }
 console.error = console.log;
 
+// app.get("/", (req, res)=>{
+//     var currentdate = new Date();
+//     var datetime = "Last Sync: " + currentdate.getDate() + "/"
+//         + (currentdate.getMonth()+1)  + "/"
+//         + currentdate.getFullYear() + " @ "
+//         + currentdate.getHours() + ":"
+//         + currentdate.getMinutes() + ":"
+//         + currentdate.getSeconds();
+//     console.log(datetime);
+//     res.send(datetime);
+// });
+app.use(bodyParser.json());
+app.use('/dogs', dogs);
+app.use('/person', person);
+app.use('/status', status);
+app.use('/tags', tags)
+app.use('/dogtag', dogtag);
+app.use('/api/news', news);
+app.use('/OurDogs', status);
+// app.use((req, res, next) => {
+//     res.header(
+//         "Access-Control-Allow-Origin",
+//         "http://s3.us-east-2.amazonaws.com/vermontdogs/index.html"
+//     );
+//     res.header(
+//         "Access-Control-Allow-Headers",
+//         "Origin, X-Requested-With, Content-Type, Accept"
+//     );
+//     next();
+// });
 
 //is configuration defined?
 if (!config.get('env')) {
@@ -38,41 +67,22 @@ if (!config.get('env')) {
     process.exit(1);
 }
 
+app.use(express.static(path.join(__dirname, '/client/build')));
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
 
 //connect to database with set configuration
-async function connection() {
-    try {
-        await db.connect(config.get('env'));
-    }
-    catch(e){
-        console.log(e.message);
-    }
-}
 
+db.connect(config.get('env'));
 
-connection();
+// Handles any requests that don't match the ones above
 
-app.use(bodyParser.json());
-app.use('/dogs', dogs);
-app.use('/person', person);
-app.use('/status', status);
-app.use('/tags', tags)
-app.use('/dogtag', dogtag);
-app.use('/news', news);
-app.use('/', news);
-app.use('/OurDogs', status);
-
-
-
-
-// app.get('*', (req,res)=>{
-//     res.sendFile(path.join(__dirname + '/client/build/index.html'));
-// });
 
 
 //const port = process.env.PORT || 3000;
 if (typeof(PhusionPassenger) !== 'undefined') {
     app.listen('passenger');
 } else {
-    app.listen(3001);
+    app.listen(3000);
 }

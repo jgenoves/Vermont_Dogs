@@ -1599,3 +1599,13 @@ Grabbed News
     fldTitle: 'forever',
     fldDate: 2018-10-07T04:00:00.000Z,
     fldContent: 'Burlington vt somewhere' } ]
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }
+This is the Enviorment: 
+{ host: 'localhost',
+  user: 'root',
+  password: 'CSBob148',
+  database: 'sys' }

@@ -2,17 +2,20 @@ var mysql = require('mysql');
 
 const config = require('config');
 var state = {
-    pool: null,
-    env: null,
+    pool: null
 }
 
 function connect(mode) {
     console.log("This is the Enviorment: ");
-    console.log(config.get('env'));
+    console.log(mode);
     return new Promise((resolve, reject) => {
-        state.pool = mysql.createPool(mode);
-        state.env = mode;
-        console.log(state.pool)
+        state.pool = mysql.createPool({
+            host: 'webdb.uvm.edu',
+            user: 'wrisigo_admin',
+            password: 'CS148Bob',
+            database: 'WRISIGO_DOGS',
+            connectTimeout: 10000
+        });
         resolve();
         reject(new Error('Failed to Connect'));
     });
@@ -36,12 +39,42 @@ function get(type) {
 ///////////////////////////////////////////////////DOGS///////////////////////////////////////////////////
 
 
+
+function queryAllDogs(){
+    return new Promise((resolve, reject) => {
+        let pool = state.pool;
+        console.log(pool.host);
+        console.log(pool.database);
+        console.log(pool.password);
+        console.log(pool.user);
+        pool.query('SELECT * tblDogs',
+            (err,result)=>{
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
+                resolve(result);
+                reject(new Error('There is no dog with id =='))
+            }
+        );
+    })
+}
+
 function queryDogbyId(id){
 return new Promise((resolve, reject) => {
     let pool = state.pool;
-    pool.query('SELECT `pmkDogs`, `fldName`,`fldBreed`,`fldPhoto`,`fldAge`,`fldDescription` FROM`tblDogs` WHERE ? = pmkDogs', id,
+    console.log(pool.host);
+    console.log(pool.database);
+    console.log(pool.password);
+    console.log(pool.user);
+
+
+    pool.query('SELECT `pmkDogs`, `fldName`,`fldBreed`,`fldPhoto`,`fldAge`,`fldDescription` FROM `tblDogs` WHERE ? = pmkDogs', id,
         (err,result)=>{
-            if(err) throw err
+            if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
             resolve(result);
             reject(new Error('There is no dog with id ==' + id))
         }
@@ -56,7 +89,10 @@ function insertDog(values) {
         console.log(values);
         pool.query('INSERT INTO `tblDogs` (`fldName`, `fldBreed`, `fldAge`, `fldDescription`, `fldPhoto`) VALUES ?', [values],
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
                 resolve(result);
                 reject(new Error('error'));
             }
@@ -72,7 +108,10 @@ function updateDog(values,id) {
         pool.query('UPDATE `tblDogs` SET `fldName` = ?, `fldBreed` = ?, `fldAge` = ?, `fldDescription` = ?, `fldPhoto` = ? WHERE `pmkDogs` = ?',
             [values.fldName, values.fldBreed,values.fldAge,values.fldDescription,values.fldPhoto, id],
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
                 resolve(result);
                 reject(new Error('error'));
             }
@@ -88,7 +127,10 @@ function insertPerson(values) {
         console.log(values);
         pool.query('INSERT INTO `tblPeople` (`fldFirstName`, `fldLastName`, `fldAddress`, `fldEmail`, `fldPhoneNumber`) VALUES ?', [values],
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
                 resolve(result);
                 reject(new Error('error'));
             }
@@ -101,7 +143,10 @@ function queryPersonbyId(id){
         let pool = state.pool;
         pool.query('SELECT `pmkPeople`, `fldFirstName`,`fldLastName`,`fldAddress`,`fldEmail`,`fldPhoneNumber` FROM`tblPeople` WHERE ? = pmkPeople', id,
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
                 resolve(result);
                 reject(new Error('There is no Person with id ==' + id))
             }
@@ -118,7 +163,10 @@ function updatePerson(values,id) {
         pool.query('UPDATE `tblPeople` SET `fldFirstName` = ?, `fldLastName` = ?, `fldAddress` = ?, `fldEmail` = ?, `fldPhoneNumber` = ? WHERE `pmkPeople` = ?',
             [values.fldFirstName, values.fldLastName,values.fldAddress,values.fldEmail,values.fldPhoneNumber, id],
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
                 resolve(result);
                 reject(new Error('error'));
             }
@@ -136,7 +184,10 @@ function insertDogStatus(values) {
         console.log(values);
         pool.query('INSERT INTO `tblDogStatus` (`pfkDogs`, `pfkPeople`, `pfkStatus`) VALUES ?', [values],
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
                 resolve(result);
                 reject(new Error('error'));
             }
@@ -154,7 +205,10 @@ function queryAvailbleDogs() {
             'ON `pmkDogs` = `pfkDogs`' +
             'WHERE `pfkStatus` = "Available" OR `pfkStatus` = "Foster"',
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('Error!'))
             }
@@ -171,7 +225,10 @@ function queryAdoptedDogs() {
             'ON `pmkDogs` = `pfkDogs`' +
             'WHERE `pfkStatus` = "Adopted" ',
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('Error!'))
             }
@@ -188,7 +245,10 @@ function queryAdoptableDogs() {
             'ON `pmkDogs` = `pfkDogs`' +
             'WHERE `pfkStatus` = "Available" ',
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('Error!'))
             }
@@ -205,7 +265,10 @@ function updateDogStatus(values,id) {
         pool.query('UPDATE `tblDogStatus` SET `pfkDogs` = ?, `pfkPeople` = ?, `pfkStatus` = ? WHERE `pfkDog` = ?',
             [values.fldFirstName, values.fldLastName,values.fldAddress,values.fldEmail,values.fldPhoneNumber, id],
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('error'));
             }
@@ -223,7 +286,10 @@ function queryDogStatusbyName(name) {
             'ON `pmkDogs` = `pfkDogs`' +
             'WHERE (`pfkStatus` = "Available") OR (`pfkStatus` = "Foster") AND (`fldName`= ?)', [name],
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('Error!'))
             }
@@ -237,7 +303,10 @@ function queryTags(){
         let pool = state.pool;
         pool.query('SELECT * FROM`tblTag`',
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('There are no tags'))
             }
@@ -250,7 +319,10 @@ function queryTagbyId(id){
         let pool = state.pool;
         pool.query('SELECT `pmkTagId`, `fldTag` FROM`tblTag` WHERE ? = pmkTagId', id,
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('There is no dog with id ==' + id))
             }
@@ -264,7 +336,10 @@ function insertTag(values) {
         console.log(values);
         pool.query('INSERT INTO `tblTag` (`fldTag`) VALUES ?', [values],
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('error'));
             }
@@ -280,7 +355,10 @@ function updateTag(values,id) {
         pool.query('UPDATE `tblTag` SET `fldTag` = ? WHERE `pmkTagId` = ?',
             [values.fldTag, id],
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('error'));
             }
@@ -301,7 +379,10 @@ function queryDogTagbyId(id){
             'ON `pmkTagId` = `pfkTagId`' +
             'WHERE `pfkDogsId` = ?', [id],
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('There are no tags'))
             }
@@ -316,7 +397,10 @@ function insertDogTag(values) {
         console.log(values);
         pool.query('INSERT INTO `tblDogsTags` (`pfkDogId`,`pfkTagId`) VALUES ?', [values],
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('ERROR IN insertDogTag query: DB.js'));
             }
@@ -345,7 +429,10 @@ function insertNews(values) {
         console.log(values);
         pool.query('INSERT INTO `tblNews` (`fldAuthor`, `fldTitle`, `fldDate`, `fldContent`) VALUES ?', [values],
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('ERROR IN News query: DB.js'));
             }
@@ -358,7 +445,10 @@ function queryNews(){
         let pool = state.pool;
         pool.query('SELECT `pmkNewsId`, `fldAuthor`, `fldTitle`, `fldDate`, `fldContent` FROM`tblNews`',
             (err,result)=>{
-                if(err) throw err
+                if(err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
                 resolve(result);
                 reject(new Error('There is no dog with'))
             }
@@ -374,6 +464,7 @@ function queryNews(){
 
 
 //DOGS
+exports.queryAllDogs = queryAllDogs;
 exports.updateDog = updateDog;
 exports.queryDogbyId=queryDogbyId;
 exports.insertDog =insertDog;
