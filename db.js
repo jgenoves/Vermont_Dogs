@@ -453,25 +453,6 @@ function updateTag(values,id) {
 
 
 
-function queryAllTags(){
-    return new Promise((resolve, reject) => {
-        let pool = state.pool;
-        pool.query('SELECT`pmkTagId`,`pfkTagId`, `pfkDogId`' +
-            'FROM`tblTag`' +
-            'JOIN`tblDogsTags`',
-            (err,result)=>{
-                if(err) {
-                    console.log(err.code);
-                    console.log(err.fatal);
-                }
-                resolve(result);
-                reject(new Error('There are no tags'))
-            }
-        );
-    })
-}
-
-
 function queryDogTagbyId(id){
     return new Promise((resolve, reject) => {
         let pool = state.pool;
@@ -491,8 +472,6 @@ function queryDogTagbyId(id){
         );
     })
 }
-
-
 
 
 function insertDogTag(values) {
@@ -575,7 +554,7 @@ exports.insertDog =insertDog;
 exports.queryFosterable =queryFosterable;
 exports.queryAdoptableDogs =queryAdoptableDogs;
 exports.queryDogStatusbyName =queryDogStatusbyName;
-//PEOPLE
+//PEROPLE
 exports.insertPerson =insertPerson;
 exports.updatePerson = updatePerson;
 exports.queryPersonbyId=queryPersonbyId;
@@ -594,7 +573,6 @@ exports.queryDogTagbyId = queryDogTagbyId;
 exports.insertDogTag = insertDogTag;
 exports.DELETE_Tags = DELETE_Tags;
 exports.queryDogTagbyId = queryDogTagbyId;
-exports.queryAllTags = queryAllTags;
 //News
 exports.insertNews = insertNews;
 exports.queryNews = queryNews;

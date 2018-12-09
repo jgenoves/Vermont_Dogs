@@ -41,7 +41,7 @@ export default class News extends Component {
                     </ul>
                 </article>
                 <Footer/>
-            </React.Fragment>
+            </React.Fragment
         );
     }
 }

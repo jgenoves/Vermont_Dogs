@@ -35,16 +35,6 @@ router.get('/:id', async (req,res)=>{
     }
 });
 
-router.get('/', async (req,res)=>{
-    try {
-        const dogs = await db.queryAllTags(id);
-        res.json(dogs)
-    }
-    catch (e) {
-        console.log('ERROR', e.message);
-    }
-});
-
 
 
 module.exports = router;
