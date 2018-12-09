@@ -7,63 +7,70 @@ import Footer from '../components/footer';
 export default class Tables extends Component {
 
     state ={
-        tblNews: [],
-        tblDogs: [],
-        tblPeople: [],
-        tblTag: [],
-        tblDogsTags: []
+        tblNews: [
+
+        ],
+        tblDogs: [
+
+        ],
+        tblPeople: [
+
+        ],
+        tblTags: [
+
+        ],
+        tblDogsTags: [
+
+        ]
+
 
     };
 
     componentDidMount() {
-         fetch('/news')
-             .then(res => res.json())
-             .then(tblNews => this.setState( { tblNews } ))
-             .catch(()=>{
-                 console.log("Error");
-             });
+
+        fetch('/news')
+            .then(res => res.json())
+            .then(tblNews => this.setState( { tblNews } ))
+
+            .catch(()=>{
+                console.log("Error");
+            });
+
+        fetch('/dogs')
+            .then(res => res.json())
+            .then(tblDogs => this.setState( { tblDogs } ))
+
+            .catch(()=>{
+                console.log("Error");
+            });
+
+        fetch('/person')
+            .then(res => res.json())
+            .then(tblPeople => this.setState( { tblPeople } ))
+
+            .catch(()=>{
+                console.log("Error");
+            });
+
+        fetch('/tags')
+            .then(res => res.json())
+            .then(tblTags => this.setState( { tblTags } ))
+
+            .catch(()=>{
+                console.log("Error");
+            });
+
+        fetch('/dogtag')
+            .then(res => res.json())
+            .then(tblDogsTags => this.setState( { tblDogsTags } ))
+
+            .catch(()=>{
+                console.log("Error");
+            });
+    }
 
 
 
-
-         fetch('/dogs/')
-
-             .then(res => res.json())
-             .then(tblDogs => this.setState( { tblDogs } ))
-             .catch(()=>{
-                 console.log("Error");
-             });
-
-
-
-
-         fetch('/people')
-
-             .then(res => res.json())
-             .then(tblPeople => this.setState( { tblPeople } ))
-             .catch(()=>{
-                 console.log("Error");
-             });
-
-
-         fetch('/tags')
-
-             .then(res => res.json())
-             .then(tblTags => this.setState( { tblTags } ))
-             .catch(()=>{
-                 console.log("Error");
-             });
-
-
-         fetch('/DogsTags')
-
-             .then(res => res.json())
-             .then(tblDogsTags => this.setState( { tblDogsTags } ))
-             .catch(()=>{
-                 console.log("Error");
-             });
-
-     };
 
 
     render() {
@@ -73,19 +80,21 @@ export default class Tables extends Component {
                 <article>
 
                     <h2>tbl News</h2>
-                    <p>{this.state.tblNews}</p>
+                    <p>{JSON.stringify(this.state.tblNews)}</p>
 
                     <h2>tbl Dogs</h2>
-                    <p>{this.state.tblDogs}</p>
+                    <p>{JSON.stringify(this.state.tblDogs)}</p>
 
                     <h2>tbl People</h2>
-                    <p>{this.state.tblPeople}</p>
+                    <p>{JSON.stringify(this.state.tblPeople)}</p>
 
                     <h2>tbl Tags</h2>
-                    <p>{this.state.tblTag}</p>
+                    <p>{JSON.stringify(this.state.tblTags)}</p>
 
                     <h2>tbl DogsTags</h2>
-                    <p>{this.state.tblDogsTags}</p>
+                    <p>{JSON.stringify(this.state.tblDogsTags)}</p>
+
+
 
 
 
