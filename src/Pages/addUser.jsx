@@ -10,20 +10,20 @@ const addUser = () => (
 
         //Initialize values
         initialValues={{
-            firstName: 'First Name',
-            lastName: 'Last Name',
-            address: '10 Cloverfield',
-            email: 'email@email.com',
-            phoneNumber: '2031234567'
+            fldFirstName: 'First Name',
+            fldLastName: 'Last Name',
+            fldAddress: '10 Cloverfield',
+            fldEmail: 'fldEmail@fldEmail.com',
+            fldPhoneNumber: '2031234567'
         }}
 
         //Validation schema, provided by npm library Yup
         validationSchema={Yup.object().shape({
-            firstName: Yup.string('Please enter a valid name').max(15, 'Please enter a valid name').required("Please enter your First Name"),
-            lastName: Yup.string('Please enter a valid name').max(15, 'Please enter a valid name').required("Please enter your Last Name"),
-            address: Yup.string('Please enter a valid address').max(25, "Please enter a valid address").required('Please enter your address'),
-            email: Yup.string().email("Please enter a valid email").required("Please enter your email address"),
-            phoneNumber: Yup.number().required("Please enter your phone number")
+            fldFirstName: Yup.string('Please enter a valid name').max(15, 'Please enter a valid name').required("Please enter your First Name"),
+            fldLastName: Yup.string('Please enter a valid name').max(15, 'Please enter a valid name').required("Please enter your Last Name"),
+            fldAddress: Yup.string('Please enter a valid address').max(25, "Please enter a valid address").required('Please enter your address'),
+            fldEmail: Yup.string().email("Please enter a valid email").required("Please enter your email address"),
+            fldPhoneNumber: Yup.number().required("Please enter your phone number")
         })}
 
         //Handling for when form is submitted
@@ -64,9 +64,9 @@ const addUser = () => (
             <fieldset className="formInput">
                 <label className="formLabel">
                     First Name:
-                    <Field type="text" name="firstName" />
+                    <Field type="text" name="fldFirstName" />
                 </label>
-                {touched.firstName && errors.firstName && <p className="errors">{errors.firstName}</p>}
+                {touched.fldFirstName && errors.fldFirstName && <p className="errors">{errors.fldFirstName}</p>}
             </fieldset>
 
 
@@ -75,19 +75,19 @@ const addUser = () => (
             <fieldset className="formInput">
                 <label className="formLabel">
                     Last Name:
-                    <Field type="text" name="lastName" />
+                    <Field type="text" name="fldLastName" />
                 </label>
-                {touched.lastName && errors.lastName && <p className="errors">{errors.lastName}</p>}
+                {touched.fldLastName && errors.fldLastName && <p className="errors">{errors.fldLastName}</p>}
             </fieldset>
 
             <br/>
 
             <fieldset className="formInput">
                 <label className="formLabel">
-                    Address:
-                    <Field type="text" name="address" />
+                    fldAddress:
+                    <Field type="text" name="fldAddress" />
                 </label>
-                {touched.address && errors.address && <p className="errors">{errors.address}</p>}
+                {touched.fldAddress && errors.fldAddress && <p className="errors">{errors.fldAddress}</p>}
             </fieldset>
 
             <br/>
@@ -95,11 +95,11 @@ const addUser = () => (
 
             <fieldset className="formInput">
                 <label className="formLabel">
-                    Email:
-                    <Field type="email" name="email"/>
+                    fldEmail:
+                    <Field type="fldEmail" name="fldEmail"/>
 
                 </label>
-                {touched.email && errors.email && <p className="errors">{errors.email}</p>}
+                {touched.fldEmail && errors.fldEmail && <p className="errors">{errors.fldEmail}</p>}
             </fieldset>
 
             <br/>
@@ -107,9 +107,9 @@ const addUser = () => (
             <fieldset className="formInput">
                 <label className="formLabel">
                     Phone Number:
-                    <Field type="text" name="phoneNumber"/>
+                    <Field type="text" name="fldPhoneNumber"/>
                 </label>
-                {touched.phoneNumber && errors.phoneNumber && <p className="errors">{errors.phoneNumber}</p>}
+                {touched.fldPhoneNumber && errors.fldPhoneNumber && <p className="errors">{errors.fldPhoneNumber}</p>}
             </fieldset>
 
 
