@@ -19,6 +19,9 @@ export default class NewsComponent extends Component {
                 <p>{this.props.newsData.fldAuthor}</p>
                 <p>{this.props.newsData.fldDate}</p>
                 <p>{this.props.newsData.fldContent}</p>
+
+
+
             </article>
         );
     }

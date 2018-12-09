@@ -1,149 +1,218 @@
 import React, {Component} from 'react';
-import { Formik, Field, Form, FieldArray, ErrorMessage, withFormik } from "formik";
+import { Formik, Field, FieldArray, } from "formik";
 import * as Yup from 'yup';
 import Top from '../components/top';
 import Footer from '../components/footer';
 
+/**This file is for adding a new dog to the db **/
 
 
-const addDog = ({
-    values,
-    errors,
-    touched,
-    isSubmitting,
-
-                }) => (
-    <Form className="addDogForm">
-
-        <article>
-            <legend className="formLegend">Dog Information</legend>
-            <fieldset className="formInput">
-                <label className="formLabel">
-                    Name of Dog:
-                <Field type="text" name="name" />
-
-                </label>
-                { touched.name && errors.name && <p className="errors">{errors.name}</p> }
-            </fieldset>
-
-            <br/>
-
-            <fieldset className="formInput">
-                <label className="formLabel">
-                    Dog Breed:
-                <Field type="textbox" name="breed" />
-                </label>
-                { touched.breed && errors.breed && <p className="errors">{errors.breed}</p> }
-            </fieldset>
-
-            <br/>
-
-            <fieldset className="formInput">
-                <label className="formLabel">
-                    Age:
-                <Field type="number" name="age" />
-
-                </label>
-                { touched.age && errors.age && <p className="errors">{errors.age}</p> }
-            </fieldset >
-
-            <br/>
-
-            <fieldset className="formInput">
-                <label className="formLabel">
-
-                    <Field type="textarea" component="textarea" rows={4} col={50} name="desc" />
-
-                </label>
-                { touched.desc && errors.desc && <p className="errors">{errors.desc}</p> }
-            </fieldset>
-
-            <FieldArray
-                name="fldTagIds"
-                render={arrayHelpers => (
-                    <React.Fragment>
-                        <label className="tagsLabel">
-                            Choose some tags for your dog
-                        </label>
-                        {tags.map(tag => (
-                            <fieldset className="tags" key={"tag"+ tag.id}>
-                                <label>
-                                    <Field
-                                        name="tagIds"
-                                        type="checkbox"
-                                        value={tag.id}
-                                        checked={values.fldTagIds.includes(tag.id)}
-                                        onChange={e => {
-                                            if (e.target.checked) arrayHelpers.push(tag.id);
-                                            else {
-                                                const idx = values.fldTagIds.indexOf(tag.id);
-                                                arrayHelpers.remove(idx);
-                                            }
-                                        }}
-                                    />{" "}
-                                    {tag.name}
-                                </label>
-
-                            </fieldset>
-                        ))}
-                        { touched.fldTagIds && errors.fldTagIds && <p className="errors">{errors.fldTagIds}</p> }
-                    </React.Fragment>
-                )}
+//This function is for rendering a singular radio button
+const RadioButton = ({
+                         field: { name, value, onChange, onBlur },
+                         id,
+                         label,
+                         className,
+                         ...props
+                     }) => {
+    return (
+        <React.Fragment>
+            <input
+                name={name}
+                id={id}
+                type="radio"
+                value={id}
+                checked={id === value}
+                onChange={onChange}
+                onBlur={onBlur}
+                className={"radio-button"}
+                {...props}
             />
-            <br/>
+            <label htmlFor={id}>{label}</label>
+        </React.Fragment>
+    );
+};
 
-            <button type="submit" disabled={isSubmitting}> Submit </button>
-        </article>
-    </Form>
+//This function will render a group of radio buttons
+const RadioButtonGroup = ({
+                              value,
+                              error,
+                              touched,
+                              id,
+                              label,
+                              className,
+                              children
+                          }) => {
+    return (
+
+        <fieldset>
+            <legend>{label}</legend>
+            {children}
+
+        </fieldset>
+    );
+};
+
+
+//Main component for adding a new dog, made using Formik npm
+const addDog = () => (
+
+    <Formik
+        //Initialize values
+        initialValues={{
+            fldDescription: 'Description',
+            fldStatus: "Available",
+
+        }}
+
+        //validation schema (functions for validation done through npm library Yup
+        validationSchema={Yup.object().shape({
+            fldName: Yup.string().required("Please enter a name"),
+            fldBreed: Yup.string().required("Please enter a breed"),
+            fldAge: Yup.number().required("Please enter a valid age"),
+            fldDescription: Yup.string().required("Please enter a description for the dog"),
+            fldPhoto: Yup.string('Please enter a valid file'),
+            fldStatus: Yup.string().required("Please select a status")
+        })
+        }
+
+        //Handling when form is submitted
+        onSubmit={(values, {resetForm, setErrors, setSubmitting}) => {
+            setTimeout(() => {
+                console.log(JSON.stringify(values, null, 2));
+                setSubmitting(false);
+                window.alert("Thank you for your submission!");
+                fetch("/api/dogs", {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(values)
+                }).then(function (response) {
+                    if (response.status >= 400) {
+                        throw new Error("Bad response from server");
+                    }
+                    return response.json();
+                }).then(function (values) {
+                    console.log(JSON.stringify(values, null, 2));
+                })
+                    .catch(()=>{
+                        console.log(("ERROR CONNECTING"))
+                    });
+
+            }, 500);
+        }}
+
+        //Rendering of actual form component
+        render={({
+                     handleSubmit,
+                     setFieldValue,
+                     setFieldTouched,
+                     values,
+                     errors,
+                     touched,
+                     isSubmitting
+                 }) => ( <form onSubmit={handleSubmit} method={'POST'}>
+
+
+                <br/>
+
+                <legend className="formLegend">Dog Information</legend>
+                <fieldset className="formInput">
+                    <label className="formLabel">
+                        Name of Dog:
+                        <Field type="text" name="fldName"/>
+
+                    </label>
+                    {touched.fldName && errors.fldName && <p className="errors">{errors.fldName}</p>}
+                </fieldset>
+
+                <br/>
+
+                <fieldset className="formInput">
+                    <label className="formLabel">
+                        Dog Breed:
+                        <Field type="textbox" name="fldBreed"/>
+                    </label>
+                    {touched.fldBreed && errors.fldBreed && <p className="errors">{errors.fldBreed}</p>}
+                </fieldset>
+
+                <br/>
+
+                <fieldset className="formInput">
+                    <label className="formLabel">
+                        Age:
+                        <Field type="number" name="fldAge"/>
+
+                    </label>
+                    {touched.fldAge && errors.fldAge && <p className="errors">{errors.fldAge}</p>}
+                </fieldset>
+
+                <br/>
+
+                <fieldset className="formInput">
+                    <label className="formLabel">
+
+                        <Field type="textarea" component="textarea" rows={4} col={50} name="fldDescription"/>
+
+                    </label>
+                    {touched.fldDescription && errors.fldDescription && <p className="errors">{errors.fldDescription}</p>}
+                </fieldset>
+
+
+                <fieldset className="formInput">
+                    <label className="formLabel">
+                        Photo(Optional):
+                        <Field type="textbox" name="fldPhoto"/>
+                    </label>
+                    {touched.fldPhoto && errors.fldPhoto && <p className="errors">{errors.fldPhoto}</p>}
+                </fieldset>
+
+
+                <legends>Choose the status of the dog</legends>
+                <RadioButtonGroup
+                    id="fldStatus"
+                    value={values.fldStatus}
+                    error={errors.fldStatus}
+                    touched={touched.fldStatus}
+                >
+                    <Field
+                        component={RadioButton}
+                        name="fldStatus"
+                        id="Adopted"
+                        label="Adopted"
+                    />
+                    <Field
+                        component={RadioButton}
+                        name="fldStatus"
+                        id="Available"
+                        label="Available"
+                    />
+
+                    <Field
+                        component={RadioButton}
+                        name="fldStatus"
+                        id="Fostered"
+                        label="Fostered"
+                    />
+                </RadioButtonGroup>
+
+
+
+                <button type="submit" disabled={isSubmitting}> Submit Dog </button>
+
+            </form>
+        )}
+
+    />
+
+
+
 );
 
 
-const tags = [
-    { id: "1", name: "Friendly" },
-    { id: "2", name: "Large" },
-    { id: "3", name: "Good with Kids" }
-];
-
-
-const FormikApp = withFormik({
-    mapPropsToValues({name, breed, age, desc}){
-        return{
-            fldName: name || 'Name',
-            fldBreed: breed || 'Breed',
-            fldAge: age || '1',
-            fldDescription: desc || 'Description',
-            fldTagIds: ["1"]
-        }
-    },
-    validationSchema: Yup.object().shape({
-        fldName: Yup.string().required("Please enter a name"),
-        fldBreed: Yup.string().required("Please enter a breed"),
-        fldAge: Yup.number().required("Please enter a valid age"),
-        fldDescription: Yup.string().required("Please enter a description for the dog"),
-        fldTagIds: Yup.array().required("At least one tag is required")
-
-    }),
-
-    handleSubmit(values, {resetForm, setErrors, setSubmitting}) {
-        setTimeout(() => {
-            console.log(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-            window.alert("Thank you for your submission!");
-
-        }, 1500);
-
-
-
-
-
-
-    },
-
-
-
-})(addDog);
-
-
+//Main component for running the page AddDog
 
 export default class AddDog extends Component {
 
@@ -152,12 +221,10 @@ export default class AddDog extends Component {
             <React.Fragment>
                 <Top/>
                 <h2 className="addDogHeader">Add a new dog to our shelter</h2>
-                <FormikApp/>
-
+                {addDog()}
                 <Footer/>
             </React.Fragment>
         );
     }
 }
-
 

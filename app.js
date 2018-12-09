@@ -5,8 +5,9 @@ const person = require('./routes/person');
 const status = require('./routes/dogstatus');
 const tags = require('./routes/tags');
 const dogtag = require('./routes/dogtag');
-var news = require('./routes/news')
+var news = require('./routes/news');
 const express = require('express');
+var cors = require('cors');
 const db = require('./db');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -41,24 +42,16 @@ console.error = console.log;
 //     console.log(datetime);
 //     res.send(datetime);
 // });
+app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/api/dogs', dogs);
 app.use('/api/person', person);
 app.use('/api/tags', tags)
 app.use('/api/dogtag', dogtag);
 app.use('/api/news', news);
 //app.use('/OurDogs', status);
-// app.use((req, res, next) => {
-//     res.header(
-//         "Access-Control-Allow-Origin",
-//         "http://s3.us-east-2.amazonaws.com/vermontdogs/index.html"
-//     );
-//     res.header(
-//         "Access-Control-Allow-Headers",
-//         "Origin, X-Requested-With, Content-Type, Accept"
-//     );
-//     next();
-// });
+
 
 //is configuration defined?
 if (!config.get('env')) {

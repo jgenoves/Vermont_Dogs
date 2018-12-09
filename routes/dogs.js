@@ -2,6 +2,8 @@ const valid = require('../models/Dogs');
 const express = require('express');
 const db = require('../db')
 const router = express.Router();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 
 
@@ -62,11 +64,12 @@ router.get('/:id', async (req, res) => {
 //INSERT A DOG
 router.post('/', async (req,res)=>{
     try {
+        console.log(req.body);
         const {error} = valid.validateDogs(req.body);
         if (error) return res.status(400).send(error.details[0].message);
         let insertData = req.body;
         let values = [];
-        values.push([insertData.fldName, insertData.fldBreed, insertData.fldAge, insertData.fldDescription, insertData.fldPhoto, updateData.fldStatus]);
+        values.push([insertData.fldName, insertData.fldBreed, insertData.fldAge, insertData.fldDescription, insertData.fldPhoto, insertData.fldStatus]);
         const added = await db.insertDog(values);
         res.json(added);
         console.log(added);

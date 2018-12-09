@@ -1,6 +1,9 @@
 const valid = require('../models/Person');
 const express = require('express');
-const db = require('../db')
+const db = require('../db');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
 
 const router = express.Router();
 
@@ -8,6 +11,7 @@ const router = express.Router();
 //INSERT A Person
 router.post('/', async (req,res)=>{
     try {
+
         const {error} = valid.validatePerson(req.body);
         if (error) return res.status(400).send(error.details[0].message);
         let insertData = req.body;
