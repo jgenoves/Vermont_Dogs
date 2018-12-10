@@ -2,6 +2,27 @@
   text-align: center;
 }
 
+.Radio{
+  text-align: center;
+}
+.Submit{
+  margin-left: 45%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Radio{
+  margin-left: 32%;
+
+}
+fieldset{
+  text-align: center;
+  padding: 5px 5px 5px 5px;
+}
+
+label{
+  margin: 5px;
+}
 
 /** HEADER CSS **/
 .logo{
@@ -25,7 +46,10 @@
 
 }
 .App-Header h1{
-  margin: .5em;
+  margin-left: 32%;
+}
+h3{
+  margin: 5px;
 }
 
 
@@ -110,6 +134,10 @@
   padding: 1.5em;
   font-size: 15px;
   font-weight: bold;
+}
+
+.Center{
+  margin-left: 43%;
 }
 
 .About-Me img{
@@ -210,8 +238,8 @@
 
 .addDogForm{
   border: thin solid ;
-  margin: 1em;
-  padding: 1em;
+  margin: 10px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   font-weight: bold;
@@ -254,6 +282,9 @@
 
 }
 
+
+
+
 .tags{
   text-align: center;
   display: flex;
@@ -263,6 +294,5 @@
 .errors {
   color: red;
 }
-
 
 

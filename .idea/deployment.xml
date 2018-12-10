@@ -5,7 +5,7 @@
       <paths name="silk">
         <serverdata>
           <mappings>
-            <mapping deploy="/www-root/cs148/Loader" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/www-root/cs148/Load" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

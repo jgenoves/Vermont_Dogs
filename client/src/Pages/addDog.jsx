@@ -170,8 +170,9 @@ const addDog = () => (
                 </fieldset>
 
 
-                <legends>Choose the status of the dog</legends>
+                <legends className="Center">Choose the status of the dog</legends>
                 <RadioButtonGroup
+                    className="Radio"
                     id="fldStatus"
                     value={values.fldStatus}
                     error={errors.fldStatus}
@@ -200,7 +201,7 @@ const addDog = () => (
 
 
 
-                <button type="submit" disabled={isSubmitting}> Submit Dog </button>
+                <button className="Submit" type="submit" disabled={isSubmitting}> Submit Dog </button>
 
             </form>
         )}

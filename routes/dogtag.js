@@ -26,8 +26,19 @@ router.post('/', async (req,res)=>{
 //Takes Dog Id and matches all tags associated with it
 router.get('/:id', async (req,res)=>{
     try {
+        console.log("here");
         const id = req.params.id;
         const dogs = await db.queryDogTagbyId(id);
+        res.json(dogs)
+    }
+    catch (e) {
+        console.log('ERROR', e.message);
+    }
+});
+
+router.get('/', async (req,res)=>{
+    try {
+        const dogs = await db.queryDogTags();
         res.json(dogs)
     }
     catch (e) {

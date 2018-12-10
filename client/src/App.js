@@ -6,6 +6,9 @@ import ViewDogs from './Pages/view-dogs';
 import {Route,Switch} from 'react-router-dom';
 import AddDog from "./Pages/addDog";
 import AddUser from "./Pages/addUser";
+import Table from "./Pages/table";
+import editDog from "./Pages/editDogs";
+
 
 class App extends Component {
     render() {
@@ -19,6 +22,8 @@ class App extends Component {
                 <Route exact={true} path={'/OurDogs'} component={ViewDogs}/>
                 <Route exact={true} path={'/addDog'} component={AddDog}/>
             <Route exact={true} path={'/addUser'} component={AddUser}/>
+            <Route exact={true} path={'/table'} component={Table}/>
+            <Route exact={true} path={'/editDog'} component={editDog}/>
 
 
         </Switch>

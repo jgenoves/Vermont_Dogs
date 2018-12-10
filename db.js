@@ -236,6 +236,22 @@ function queryPersonbyId(id){
     })
 }
 
+function queryPerson(){
+    return new Promise((resolve, reject) => {
+        let pool = state.pool;
+        pool.query('SELECT * FROM `tblPeople`',
+            (err,result)=>{
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
+                resolve(result);
+                reject(new Error('There is no Person with id =='))
+            }
+        );
+    })
+}
+
 
 function updatePerson(values,id) {
     return new Promise((resolve, reject) => {
@@ -453,14 +469,29 @@ function updateTag(values,id) {
 
 
 
+
+function queryDogTags(){
+    return new Promise((resolve, reject) => {
+        let pool = state.pool;
+        pool.query('SELECT * FROM`tblDogsTags`',
+            (err,result)=>{
+                if(err) {
+                    console.log(err.code);
+                    console.log(err.fatal);
+                }
+                resolve(result);
+                reject(new Error('There are no tags'))
+            }
+        );
+    })
+}
+
+
+
 function queryDogTagbyId(id){
     return new Promise((resolve, reject) => {
         let pool = state.pool;
-        pool.query('SELECT`pmkTagId`,`pfkTagId`, `pfkDogId`' +
-            'FROM`tblTag`' +
-            'JOIN`tblDogsTags` ' +
-            'ON `pmkTagId` = `pfkTagId`' +
-            'WHERE `pfkDogsId` = ?', [id],
+        pool.query('SELECT `pmkTagId`,`pfkTagId`, `pfkDogId` FROM `tblTag` JOIN `tblDogsTags` ON `pmkTagId` = `pfkTagId` WHERE `pfkDogId` = ?', [id],
             (err,result)=>{
                 if(err) {
                 console.log(err.code);
@@ -558,6 +589,8 @@ exports.queryDogStatusbyName =queryDogStatusbyName;
 exports.insertPerson =insertPerson;
 exports.updatePerson = updatePerson;
 exports.queryPersonbyId=queryPersonbyId;
+exports.queryPerson=queryPerson;
+
 //DogsStatus -NOT USED
 // exports.insertDogStatus =insertDogStatus;
 // exports.updateDogStatus =updateDogStatus;
@@ -573,6 +606,7 @@ exports.queryDogTagbyId = queryDogTagbyId;
 exports.insertDogTag = insertDogTag;
 exports.DELETE_Tags = DELETE_Tags;
 exports.queryDogTagbyId = queryDogTagbyId;
+exports.queryDogTags = queryDogTags;
 //News
 exports.insertNews = insertNews;
 exports.queryNews = queryNews;

@@ -31,6 +31,16 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+router.get('/', async (req, res) => {
+    try {
+        const name = await db.queryPerson();
+        res.json(name)
+    } catch (e) {
+        console.log('ERROR', e.message);
+    }
+});
+
+
 //UPDATE Person BY ID
 router.put('/:id', async (req, res) => {
     try {

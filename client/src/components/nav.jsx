@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+
+
 const css = 'Nav';
 
 export default class Nav extends Component {
@@ -11,11 +13,10 @@ export default class Nav extends Component {
                 <a className={css} href='OurDogs'>View our Dogs</a>
                 <a className={css} href='addDog'>Add a dog</a>
                 <a className={css} href='addUser'>Add a User</a>
+                <a className={css} href='Table'>View Tables</a>
             </nav>
         );
     }
 }
-
-
 
 
